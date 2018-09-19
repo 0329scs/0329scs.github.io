@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Walt Disney</title>
+	<link rel="stylesheet" media="all" href="css/reset.css" />
+	<style></style>
+	<script></script>
+</head>
+<body>
+	<div class="wrap">
+		<a href="#" class="skip">Skip to content</a>
+		<header class="top"><!-- header --><!-- mini_fix -->
+			<div class="h_inner">
+				<h1><a href="#"></a></h1>
+				<div class="mini_btn">
+					<a href="#" class="side_on">menu</a>
+					<a href="#" class="side_off"></a>
+				</div>
+				<nav class="mini_nav">
+					<ul>
+						<li><a href="#">about</a></li>
+						<li><a href="#">investor relations</a></li>
+						<li><a href="#">careers</a></li>
+						<li><a href="#">environment</a></li>
+						<li><a href="#">philanthropy</a></li>
+						<li><a href="#">news</a></li>
+					</ul>
+				</nav>
+				<div class="menu_left">
+					<ul class="clearfix">
+						<li class="">
+							<a href="#">about</a>
+							<ul class="sub_menu">
+								<li><a href="#">Leadership</a></li>
+								<li><a href="#">Our Businesses</a></li>
+								<li><a href="#">Global</a></li>
+								<li><a href="#">Social Responsibility</a></li>
+								<li><a href="#">CSR Reports</a></li>
+								<li><a href="#">Responsible Supply Chain</a></li>
+								<li><a href="#">Policies and Approaches</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Investor Relations</a>
+							<ul class="sub_menu">
+								<li><a href="#">Events and Presentations</a></li>
+								<li><a href="#">Investor Relations News</a></li>
+								<li><a href="#">Reports</a></li>
+								<li><a href="#">Forms</a></li>
+								<li><a href="#">Corporate Governance</a></li>
+								<li><a href="#">Frequently Asked Questions</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Careers</a></li>
+					</ul>
+				</div>
+				<div class="menu_right">
+					<ul class="clearfix">
+						<li>
+							<a href="#">Environment</a>
+							<ul class="sub_menu">
+								<li><a href="#">Environmental Impact</a></li>
+								<li><a href="#">Disney Conservation Fund</a></li>
+								<li><a href="#">Related Downloads</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Philanthropy</a>
+							<ul class="sub_menu">
+								<li><a href="#">Charitable Giving</a></li>
+								<li><a href="#">Volunteering</a></li>
+								<li><a href="#">Related Downloads</a></li>
+							</ul>
+						</li>
+						<li><a href="#">news</a></li>
+					</ul>
+				</div>
+				<div class="search">
+					<div class="s_inner"><a href="#"></a></div>
+					<div class="s_contain">
+						<input type="text" placeholder="What are you looking for?" title="search">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<script>
+			hovMenu("left");
+			hovMenu("right");
+
+			function hovMenu(classPass) {
+				var menuNav = document.querySelector(".h_inner > " + ".menu_" + classPass);
+
+				menuNav.addEventListener("mouseover", overWork);
+				menuNav.addEventListener("mouseout", outWork);
+
+				var subLi;
+
+				function overWork(e) {
+					if(e.target.nodeName === "A") {
+						menuLi = e.target.parentNode;
+						if(menuLi.querySelector("ul")) {
+							menuLi.className = "active";
+							subLi = menuLi;
+						}
+					} 
+				}
+				function outWork(e) {
+					var arrived = e.relatedTarget;
+					if(subLi === undefined) {
+						return;
+					} else if(!check(subLi, arrived)) {
+						subLi.className = "";
+					}
+					function check(subPass, arrivPass) {
+						if(arrivPass === null) {
+							return;
+						}
+						while (arrivPass.nodeName != "HTML") {
+							if (subPass === arrivPass) {
+								return true;
+							}
+							arrivPass = arrivPass.parentNode
+						}
+						return false;
+					}
+				}
+			}
+
+			searchMenu()
+
+			function searchMenu() {
+				var header = document.querySelector("header");
+				var search = document.querySelector(".search");
+				var menuin = document.querySelector(".s_inner > a");
+				var quesX = document.querySelector(".s_contain > a");
+
+				menuin.addEventListener("click", openWork);
+				quesX.addEventListener("click", exitWork);
+
+				function openWork(e) {
+					header.classList.add("search_on");
+					search.classList.add("search_on");
+					e.preventDefault();
+				}
+				function exitWork(e) {
+					header.classList.remove("search_on");
+					search.classList.remove("search_on");
+					e.preventDefault();
+				}
+			}
+			
+			fixMenu() 
+
+			function fixMenu() {
+				var headFix = document.querySelector("header");
+				var btnFix = headFix.querySelectorAll(".mini_btn > a");
+
+				for(var i = 0; i < btnFix.length; i++) {
+					btnFix[i].addEventListener("click", fixWork);
+				}
+
+				function fixWork(e) {
+					if(headFix.classList.contains("mini_fix")) {
+						headFix.classList.remove("mini_fix");
+						e.preventDefault();
+					} else {
+						headFix.classList.add("mini_fix");
+						e.preventDefault();
+					}
+				}
+			}
+
+			scrollMenu()
+
+			// 과거 < 현재 - 내렸다는증거 ,  과거 > 현재 - 올렸다는 증거
+			function scrollMenu() {
+				var htmlEle = document.querySelector("html");
+				var headEle = htmlEle.querySelector("header");
+				var past = 0;
+
+				document.addEventListener("scroll", scrollWork);
+
+				function scrollWork() {
+					var now = htmlEle.scrollTop;
+					if (now === 0) {
+						headEle.classList.remove("scroll");
+						headEle.classList.add("top");
+					} else if (past > now) {
+						headEle.classList.remove("top");
+						headEle.classList.add("scroll");
+					} else {
+						headEle.classList.remove("scroll");
+					}
+					past = now;
+				}
+			}
+		</script>
+		<main><!-- main -->
+			<section class="visual">
+				<div class="vi_center"><h1>The Walt Disney Company</h1></div>
+			</section>
+			<section class="stock">
+				<div class="st_inner">
+					<ul class="clearfix">
+						<li class="st_desc"><p>DIS as of  04:01PM EDT<span>pricing delayed by 15min</span></p></li>
+						<li class="st_price"><p>$107.06</p></li>
+						<li class="st_change">
+							<p><span><img src="images/down.png" alt="stock down"/> -1.79</span> <span>(-1.64%)</span></p>
+						</li>
+						<li class="st_link"><p><a href="">VIEW STOCK DETAILS</a></p></li>
+					</ul>
+				</div>
+			</section>
+			<section class="news">
+				<h2>Recent News</h2>
+				<div class="con_inner">
+					<div class="cols">
+						<div class="col1 con_mid">
+							<a href="#">
+								<div class="con_img"><img src="images/news_mid.jpg" alt=""/></div>
+								<div class="con_desc">
+									<p class="date">June 18, 2018</p>
+									<h3>The Walt Disney Company Honors its Longest-Serving Employee</h3>
+								</div>
+							</a>
+						</div>
+						<div class="col2 con_mid news_left">
+							<div>
+								<a href="#">
+									<div class="con_img"><img src="images/news_left01.jpg" alt=""/></div>
+									<div class="con_desc">
+										<p class="date">June 18, 2018</p>
+										<h3>Incredibles 2 Sets Biggest Domestic Animated Debut Ever With $182.7 Millio…</h3>
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<div class="con_img"><img src="images/news_left02.jpg" alt=""/></div>
+									<div class="con_desc">
+										<p class="date">June 15, 2018</p>
+										<h3>Disney•Pixar’s Incredibles 2 Embraces its Unique Mid-Century Modern Aest…</h3>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col2 con_mid news_right">
+							<div>
+								<a href="#">
+									<div class="con_img"><img src="images/news_right01.jpg" alt=""/></div>
+									<div class="con_desc">
+										<p class="date">June 15, 2018</p>
+										<h3>Disney Musicals in Schools Helps Build Theatrical Education Programs in Publ…</h3>
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<div class="con_img"><img src="images/news_right02.jpg" alt=""/></div>
+									<div class="con_desc">
+										<p class="date">June 13, 2018</p>
+										<h3>Teaser Trailer for Tim Burton’s Live-Action Dumbo Debuts</h3>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="con_inner">
+					<div class="panel pull_left clearfix">
+						<div class="pan_img"><img src="images/about.jpg" alt=""/></div>
+						<div class="pan_desc">
+							<h6>About</h6>
+							<p>The mission of The Walt Disney Company is to be one of the world’s leading producers and providers of entertainment and information. Using our portfolio of brands to differentiate our content, services and consumer products, we seek to develop the most creative, innovative and profitable entertainment experiences and related products in the world.</p>
+							<a href="#" class="btn">View More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="invest">
+				<div class="con_inner">
+					<div class="panel pull_right clearfix">
+						<div class="pan_img"><img src="images/invest.jpg" alt=""/></div>
+						<div class="pan_desc">
+							<h6>Investor Relations</h6>
+							<p>Our commitment to creativity, technology and innovation generates unparalleled experiences that drive long-term value for our shareholders.</p>
+							<a href="#" class="btn">View More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="careers">
+				<div class="con_inner">
+					<div class="panel pull_left clearfix">
+						<div class="pan_img"><img src="images/careers.jpg" alt=""/></div>
+						<div class="pan_desc">
+							<h6>Careers</h6>
+							<p>Explore a variety of opportunities to start a new chapter in your career at Disney.</p>
+							<a href="#" class="btn">View More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="envi">
+				<div class="con_inner">
+					<div class="panel pull_right clearfix">
+						<div class="pan_img"><img src="images/envi.jpg" alt=""/></div>
+						<div class="pan_desc">
+							<h6>Environment</h6>
+							<p>At Disney, we are committed to using resources wisely and protecting the planet as we operate and grow our business. We conserve nature and inspire kids and families to join us in caring for our planet.</p>
+							<a href="#" class="btn">View More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="help">
+				<div class="con_inner">
+					<div class="panel pull_left clearfix">
+						<div class="pan_img"><img src="images/help.jpg" alt=""/></div>
+						<div class="pan_desc">
+							<h6>Philanthropy</h6>
+							<p>Disney is committed to strengthening communities by providing hope, happiness, and comfort to kids and families who need it most.</p>
+							<a href="#" class="btn">View More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer><!-- footer -->
+			<div class="site_info">
+				<div class="sns">
+					<p>Follow Us On</p>
+					<ul>
+						<li class="youtube"><a href="#"></a></li>
+						<li class="twit"><a href="#"></a></li>
+					</ul>
+				</div>
+				<div class="foot_nav">
+					<ul class="clearfix">
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Your California Privacy Rights</a></li>
+						<li><a href="#">Children’s Online Privacy Policy</a></li>
+						<li><a href="#">Disney.com Guest Services</a></li>
+						<li><a href="#">Advertise With Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+				<p>&#169;Disney 2018 All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YG ENTERTAINMENT</title>
+	<link rel="stylesheet" media="all" href="css/reset.css" />
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+    <script type="text/javascript" src="re_classlist.js"></script>
+	<style></style>
+	<script></script>
+</head>
+<script>
+	$(document).ready(function () {
+		var testSlide = $(".m_banner").bxSlider({
+			controls: false,
+        	pagerSelector: ".b_page",
+        	auto: true
+		})
+	})
+</script>
+<body class="" id="body_hide">
+	<div class="wrap">
+		<header class="" id="on"><!-- header -->
+			<div class="h_inner clearfix">
+				<h1><a href="">YG FAMILY</a></h1>
+				<div class="nav_icon" id="show">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+				<div class="nav_x" id="hidden">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+				<script>
+					moNavMenu();
+
+					function moNavMenu() {
+						var bodyHide = document.querySelector("body");
+						var targetHead = bodyHide.querySelector("header");
+						var navAct = targetHead.querySelector(".nav_icon");
+						var navX = targetHead.querySelector(".nav_x");
+
+						navAct.addEventListener("click", actWork);
+						navX.addEventListener("click", closeWork);
+
+						function actWork(e) {
+							if(e.target.nodeName === "A" || e.target.nodeName === "SPAN") {
+								targetHead.classList.add("active");
+								bodyHide.classList.add("body_hide");
+							}
+							e.preventDefault();
+						}
+						function closeWork(e) {
+							if(e.target.nodeName === "A" || e.target.nodeName === "SPAN") {
+								targetHead.classList.remove("active");
+								bodyHide.classList.remove("body_hide");
+							}
+							e.preventDefault();
+						}
+					}
+				</script>
+				<nav>
+					<ul>
+						<li><a href="">NOTICE</a></li>
+						<li><a href="">NEWS</a></li>
+						<li><a href="">ARTISTS</a></li>
+						<li><a href="">ACTORS</a></li>
+						<li><a href="">TALENTS</a></li>
+						<li><a href="">MULTIMEDIA</a></li>
+						<li><a href="">SELECT</a></li>
+						<li><a href="">WITH</a></li>
+						<li><a href="">AUDITION</a></li>
+					</ul>
+				</nav>
+				<div class="lang">
+					<ul>
+						<li><a href="#" class="">KOREAN</a></li>
+						<li><a href="#" class="active">ENGLISH</a></li>
+						<li><a href="#" class="">CHINESE</a></li>
+						<li><a href="#" class="">JAPANESE</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<script>
+			trans("lang");
+
+			function trans(classPass) {
+				var transLang = document.querySelector("." + classPass);
+				var langsLink = transLang.querySelectorAll("a");
+
+				transLang.addEventListener("click", change);
+
+				function change(event) {
+					if(event.target.classList.contains("active")) {
+						event.target.className = "";
+					} else {
+						for(var i = 0; i < langsLink.length; i++) {
+							langsLink[i].className = "";
+						}
+						event.target.className = "active";
+					}
+				}
+			}
+		</script>
+		<main><!-- main -->
+			<div class="banner">
+				<ul class="clearfix m_banner">
+					<li class="">
+						<a href="#">
+							<picture>
+								<source media="(max-width: 720px)" srcset="images/s_banner00.jpg"></source>
+								<img src="images/m_banner00.jpg" alt="epikhigh concert info" />
+							</picture>
+						</a>
+					</li>
+					<li class="">
+						<a href="#">
+							<picture>
+								<source media="(max-width: 720px)" srcset="images/s_banner01.jpg"></source>
+								<img src="images/m_banner01.jpg" alt="epikhigh concert info" />
+							</picture>
+						</a>
+					</li>
+					<li class="">
+						<a href="#">
+							<picture>
+								<source media="(max-width: 720px)" srcset="images/s_banner02.jpg"></source>
+								<img src="images/m_banner02.jpg" alt="epikhigh concert info" />
+							</picture>
+						</a>
+					</li>
+					<li class="">
+						<a href="#">
+							<picture>
+								<source media="(max-width: 720px)" srcset="images/s_banner03.jpg"></source>
+								<img src="images/m_banner03.jpg" alt="epikhigh concert info" />
+							</picture>
+						</a>
+					</li>
+					<li class="">
+						<a href="#">
+							<picture>
+								<source media="(max-width: 720px)" srcset="images/s_banner04.jpg"></source>
+								<img src="images/m_banner04.jpg" alt="epikhigh concert info" />
+							</picture>
+						</a>
+					</li>
+				</ul>
+				<div class="b_page">
+					<a href="#"  class="">a</a>
+					<a href="#"  class="">a</a>
+					<a href="#"  class="">a</a>
+					<a href="#"  class="">a</a>
+					<a href="#"  class="">a</a>
+				</div>
+			</div>
+			<div class="board">
+				<ul class="clearfix">
+					<li>
+						<div class="task">
+							<h4><strong>NOTICE</strong></h4>
+							<div class="info">
+								<ul>
+									<li class="on"><a href="">YG</a></li>
+									<li><a href="">ARTISTS</a></li>
+								</ul>
+								<div class="desc">
+									<p>
+										<a href="">2015 YG AUDITION - NEXT GENERATI...</a>
+										<span>2015.08.07</span>
+									</p>
+									<p>
+										<a href="">March 25 BIGBANG’S 2015 WELCOMIN...</a>
+										<span>2015.03.05</span>
+									</p>
+								</div>
+							</div>
+							<span><a href="">more</a></span>
+						</div>
+					</li>
+					<li>
+						<div class="task">
+							<h4><strong>MUSIC VIDEO</strong></h4>
+							<div class="info">
+								<a href="" class="clearfix">
+									<img src="images/board_p01.jpg" alt="winner's everyday" />
+									<p>
+										<strong>EVERYDAY</strong>
+										<span>WINNER</span>
+										<i>2018.04.04</i>
+									</p>
+								</a>
+							</div>
+							<span><a href="">more</a></span>
+						</div>
+					</li>
+					<li>
+						<div class="task">
+							<h4><strong>NEWS</strong></h4>
+							<div class="info">
+								<a href="">
+									<img src="images/board_p02.jpg" alt="winner's SOBER" />
+									<p>
+										<strong>BIGBANG’s ‘SOBER’...</strong>
+										<i>2018.05.23</i>
+									</p>
+								</a>
+							</div>
+							<span><a href="">more</a></span>
+						</div>
+					</li>
+					<li class="life">
+						<div class="task">
+							<h4><strong>YG LIFE</strong></h4>
+							<div class="info">
+								<div class="desc">
+									<p>
+										<a href="">[FROM YG]</a>
+										<span>Fri, 25 May 2018</span>
+									</p>
+									<p>
+										<a href="">BIGBANG – ‘맨정신(SOBER)’ M...</a>
+										<span>Fri, 25 May 2018</span>
+									</p>
+								</div>
+							</div>
+							<span><a href="">more</a></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="shop">
+				<img src="images/shop_list.jpg" alt="YG item goods" />
+				<div class="shop_link">
+					<a href="">link1</a>
+					<a href="">link2</a>
+					<a href="">link3</a>
+					<a href="">link4</a>
+				</div>
+			</div>
+			<div class="sns">
+				<p>OFFICIAL YG ENTERTAINMENT SOCIAL NETWORKS</p>
+				<ul>
+					<li><a href="" class="youtube"></a></li>
+					<li><a href="" class="facebook"></a></li>
+					<li><a href="" class="weibo"></a></li>
+					<li><a href="" class="twit"></a></li>
+				</ul>
+			</div>
+		</main>
+		<footer>
+			<div class="f_inner">
+				<div class="help">
+					<ul>
+						<li><a href="">ABOUT YG</a></li>
+						<li><a href="">CUSTOMER CENTER</a></li>
+					</ul>
+				</div>
+				<div class="familysite">
+					<a href="#">YG FAMILY SITE</a>
+					<ul>
+						<li><a href="">YG LIFE</a></li>
+						<li><a href="">YG STAGE</a></li>
+						<li><a href="">YG SELECT</a></li>
+						<li><a href="">YG AUDITION</a></li>
+						<li><a href="">YG WITH</a></li>
+					</ul>
+				</div>
+				<script>
+					hoverE();
+
+					function hoverE() {
+						var open = document.querySelector(".familysite");
+
+						open.onclick = function () {
+							if (open.classList.contains("active")) {
+								open.classList.remove("active");
+								return false;
+								} else {
+									open.classList.add("active");
+									return false;
+								}
+							}
+
+							open.addEventListener("mouseover", overwork);
+							open.addEventListener("mouseout", outwork);
+
+							function overwork() {
+								open.classList.add("active");
+							}
+							function outwork() {
+								open.classList.remove("active");
+							}
+						}
+
+				</script>
+				<div class="copyright clearfix">
+					<img src="images/logo_footer.gif" alt="yg logo"/>
+					<p>YG Entertainment의 모든 컨텐츠는 저작권의 보호를 받고 있습니다.<br/>Copyright YG Entertainment All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

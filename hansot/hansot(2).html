@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>한솥도시락(2)</title>
+	<link rel="stylesheet" media="all" href="css/reset(2).css"/>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  	<script type="text/javascript" src="re_classlist.js"></script>
+	<style></style>
+	<script></script>
+</head>
+<script>
+	$(document).ready(function () {
+		var adSlide = $(".ad_img").bxSlider({
+			auto: true,
+			controls: false,
+			autoControls: true,
+			autoControlsCombine: true,
+			pagerSelector: ".list",
+			autoControlsSelector: ".ps_btn"
+		});
+	})
+</script>
+<body>
+<div class="wrap">
+	<header class="">
+		<div class="customer clearfix">
+			<ul>
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">회원가입</a></li>
+				<li class="insta"><a href="#"></a></li>
+				<li class="facebook"><a href="#"></a></li>
+			</ul>
+		</div>
+		<div class="h_menu">
+			<div class="menu_inner">
+				<h1><a href="#"></a></h1>
+				<div class="mo_btn">
+					<a href="#">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</a>
+				</div>
+				<nav>
+					<div class="m_login">
+						<ul class="clearfix">
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+						</ul>
+					</div>
+					<ul>
+						<li class="top_nav">
+							<a href="#" class="">BRAND</a>
+							<div class="in02">
+								<ul>
+									<li><a href="#">브랜드 스토리</a></li>
+									<li><a href="#">브랜드 철학</a></li>
+									<li><a href="#">브랜드 유산</a></li>
+									<li><a href="#">ESG 경영</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="top_nav">
+							<a href="#">MENU</a>
+							<div class="in02">
+								<ul>
+									<li><a href="#">전체메뉴</a></li>
+									<li><a href="#">식재료 이야기</a></li>
+									<li><a href="#">페루찬차마요커피</a></li>
+									<li><a href="#">단체 주문</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="top_nav">
+							<a href="#">STORE</a>
+							<div class="in02">
+								<ul>
+									<li><a href="#">주변점포찾기</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="top_nav">
+							<a href="#">EVENT</a>
+							<div class="in02">
+								<ul>
+									<li><a href="#">이 달의 이벤트</a></li>
+									<li><a href="#">신규점 오픈이벤트</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="top_nav">
+							<a href="#">FRANCHISE</a>
+							<div class="in02">
+								<ul>
+									<li><a href="#">Why 한솥 가맹점</a></li>
+									<li><a href="#">성공수기</a></li>
+									<li><a href="#">창업개설절차</a></li>
+									<li><a href="#">예상 창업 비용</a></li>
+									<li><a href="#">창업문의</a></li>
+									<li><a href="#">창업설명회 일정·신청</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="top_nav">
+							<a href="#">HANSOT</a>
+							<div class="in02">
+								<ul>
+									<li><a href="#">한솥의 약속</a></li>
+									<li><a href="#">한솥의 비전</a></li>
+									<li><a href="#">연혁&#38;수상</a></li>
+									<li><a href="#">사회공헌활동</a></li>
+									<li><a href="#">한솥 NEWS</a></li>
+									<li><a href="#">오시는 길</a></li>
+									<li><a href="#">인재채용</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<script>
+		sizeWork();
+		window.addEventListener("resize", sizeWork);
+
+		function sizeWork() {
+			var viewWidth = window.innerWidth;
+	    	if(viewWidth < 1023) {
+	    		mobileTop();
+
+				function mobileTop() {
+					var wrapFix = document.querySelector(".wrap");
+					var mobileMenu = document.querySelector(".menu_inner");
+					var mobileBtn = mobileMenu.querySelector(".mo_btn");
+					var mobileNav = mobileMenu.querySelector("nav > ul");
+					var mobileLi = mobileMenu.querySelectorAll(".top_nav");
+			
+					mobileBtn.addEventListener("click", mobileOn);
+					mobileNav.addEventListener("click", mobileLiOn);
+
+					function mobileOn(e) {
+						if(e.target.nodeName != "A" && e.target.nodeName != "SPAN") {
+							return;
+						}
+						var mobileIn = mobileBtn.parentNode;
+						if(mobileIn.classList.contains("act")) {
+							mobileIn.classList.remove("act");
+							wrapFix.classList.remove("fix");
+						} else {
+							mobileIn.classList.add("act");
+							wrapFix.classList.add("fix");
+						}
+							e.preventDefault();
+						}
+					function mobileLiOn(e) {
+						if(e.target.nodeName != "A") {
+							return;
+						}
+						var moTargetLi = e.target.parentNode;
+						
+						if(moTargetLi.classList.contains("act")) {
+							moTargetLi.classList.remove("act");
+							wrapFix.classList.remove("li_scroll");
+						} else {
+							for(var i = 0; i < mobileLi.length; i++) {
+								mobileLi[i].classList.remove("act");
+								}
+							moTargetLi.classList.add("act");
+							wrapFix.classList.add("li_scroll");
+							}
+							e.preventDefault();
+						}
+					}
+	    		}
+
+	    	if(viewWidth > 1024) {
+	    		scrollMenu()
+
+				function scrollMenu() {
+					var htmlEle = document.querySelector("HTML");
+					var headEle = htmlEle.querySelector("header");
+
+					document.addEventListener("scroll", scrollWork);
+
+					function scrollWork() {
+						var now = htmlEle.scrollTop;
+
+						if(now > 0) {
+							headEle.classList.add("scroll");
+						} else {
+							headEle.classList.remove("scroll");
+							}
+						}
+					}
+
+
+				navMenu();
+
+				function navMenu() {
+					var headinner = document.querySelector(".menu_inner");
+					var topLi = headinner.querySelectorAll(".top_nav");
+
+					headinner.addEventListener("mouseover", openWork);
+					headinner.addEventListener("mouseout", exitWork);
+
+					var subLi;
+
+					function openWork(e) {
+						if(e.target.nodeName != "A") {
+							return;
+						}
+						for(var i = 0; i < topLi.length; i++) {
+							topLi[i].classList.remove("on");
+						}
+						var targetLi = e.target.parentNode;
+						if(targetLi.classList.contains("top_nav")) {
+							headinner.classList.add("on");
+							targetLi.classList.add("on");
+							subLi = targetLi;
+						}
+					}
+
+					function exitWork(e) {
+						var arrived = e.relatedTarget;
+						
+						if(!check(arrived, subLi)) {
+							for(var i = 0; i < topLi.length; i++) {
+							topLi[i].classList.remove("on");
+							}
+							headinner.classList.remove("on");
+						}
+
+						function check(arrivedPass, subLiPass) {
+							if(arrivedPass === null) {
+								return;
+							}
+							while(arrivedPass.nodeName != "HTML") {
+								if(arrivedPass === subLiPass) {
+									return true;
+								}
+								arrivedPass = arrivedPass.parentNode;
+							}
+							return false;
+						}
+
+					}
+
+				}
+	    	}
+		}
+	</script>
+	<main>
+		<div class="ad">
+			<div class="ad_list">
+				<ul class="ad_img">
+					<li class=""><a href="#" class="adimg01">adimg</a></li>
+					<li><a href="#" class="adimg02">adimg</a></li>
+					<li><a href="#" class="adimg03">adimg</a></li>
+					<li><a href="#" class="adimg04">adimg</a></li>
+				</ul>
+				<div class="page">
+					<div class="page_in">
+						<div class="list">
+							<span class="active"></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					<div class="ps_btn"><a href="#"></a></div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="interval con1">
+			<div class="con_in">
+				<ul class="con1_in clearfix">
+					<li>
+						<a href="#">
+							<div class="con_img"><img src="images/main_img_01.jpg"/></div>
+							<div class="con_desc">
+								<p>
+									<span>가격 이상의 가치가 담긴</span>
+									<span>다양한 메뉴를 확인해 보세요</span>
+								</p>
+								<i class="con_text">한솥 메뉴</i>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="con_img"><img src="images/main_img_02.jpg"/></div>
+							<div class="con_desc">
+								<p>
+									<span>갓 지은 한끼가 기다리고 있는</span>
+									<span>가까운 한솥 매장을 찾아보세요</span>
+								</p>
+								<i class="con_text">주변점포찾기</i>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="interval con2">
+			<div class="con_in">
+				<ul class="con2_in clearfix">
+					<li>
+						<h2>
+							<span>가맹점주에게도</span>
+							<span>든든한 한솥입니다</span>
+						</h2>
+						<p>
+							<span>점주님들의 꿈을 실현시켜 드리기 위해</span>
+							<span>가맹점주와 성공까지 동행하는 한솥!</span>
+							<span>상담부터 개업까지 모든 희로애락을 함께 합니다.</span>
+						</p>
+					</li>
+					<li>
+						<a href="#">
+							<div class="con_img"><img src="images/main_img_03.jpg"/></div>
+							<div class="con_desc">
+								<p>
+									<span>한솥은 언제나 고객과 점주님들의</span>
+									<span>이익을 먼저 생각합니다</span>
+								</p>
+								<i class="con_text">Why 한솥 가맹점</i>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="con_img"><img src="images/main_img_04.jpg"/></div>
+							<div class="con_desc">
+								<p>
+									<span>한솥과 함께하는 가맹점주들의</span>
+									<span>성공 스토리입니다</span>
+								</p>
+								<i class="con_text">성공수기</i>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="interval con3">
+			<div class="con3_img"><img src="images/main_visual.jpg"/></div>
+			<div class="con_in">
+				<div class="con3_desc">
+					<h2>
+						<span>든든한 솥밥을 위해</span>
+						<span>한솥이 지키고,</span>
+						<span>키워가는 것들</span>
+					</h2>
+					<p>
+						<span>한솥은 '따끈한 도시락으로 지역사회에 공헌한다' 라는</span>
+						<span>기업이념 아래, 고객 이익을 최우선으로 하며 엄선된</span>
+						<span>좋은 식재료만 사용하는 대한민국 외식종합기업 시장을</span>
+						<span>리드하는 글로벌 종합외식기업 입니다.</span>
+					</p>
+					<div class="con3_btn"><a href="#">브랜드 철학</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="interval con4">
+			<div class="con_in clearfix">
+				<a href="#">
+					<div class="con_img"><img src="images/main_img_05.jpg"/></div>
+					<div class="con_desc">
+						<h2>
+							<span>식재료 앞에서는</span>
+							<span>한없이</span>
+							<span>까탈스럽습니다</span>
+						</h2>
+						<p>
+							<span>맑고 깨끗한 자연 환경속에서 재배된 식재료가</span>
+							<span>아니면 한솥이 될 수 없습니다.</span>
+							<span>모든 식재료는 고객분들이 안심하고 드실 수 있도록</span>
+							<span>엄격한 기준 아래 선별됩니다.</span>
+						</p>
+						<i class="con_text">식재료이야기</i>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="con_more">
+			<div class="more_in">
+				<h2>더 많은 이야기</h2>
+				<ul class="clearfix">
+					<li>
+						<a href="#">
+							<div class="more_img"><img src="images/more_promise.jpg"/></div>
+							<h3>한솥의 약속</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="more_img"><img src="images/more_event.jpg"/></div>
+							<h3>온라인 이벤트</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="more_img"><img src="images/more_news.jpg"/></div>
+							<h3>한솥 NEWS</h3>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="foot_in">
+			<div class="menu_award">
+				<div class="menu">
+					<ul>
+						<li class="off1023"><a href="#">인재채용</a></li>
+						<li class="off1023"><a href="#">협력업체등록</a></li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">고객의 소리</a></li>
+						<li><a href="#" class="personal">개인정보취급방침</a></li>
+						<li><a href="#">이용약관</a></li>
+					</ul>
+				</div>
+				<div class="award">
+					<img src="images/logo_webaward2017.png" alt="web award korea 2017 프랜차이즈분야 대상2017">
+				</div>
+			</div>
+			<div class="com_info">
+				<div class="info_in">
+					<div class="info_desc">
+						<p class="desc_btn"><a href="#">한솥 사업자 정보</a></p>
+						<ul class="pc_info">
+							<li>대표이사 이영덕</li>
+							<li>사업자등록번호 214-81-96569</li>
+							<li>서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</li>
+							<li>T. 02-585-1114</li>
+							<li>F. 02-598-1116</li>
+							<li>E. webmaster@hsd.co.kr</li>
+							<li>한솥 도시락 고객센터 02-585-1114</li>
+							<li>전국창업설명회 1811-0188</li>
+							<li>단체주문 1644-3288</li>
+						</ul>
+						<div class="mo_info">
+							<span class="p_erase">대표이사 이영덕</span>
+							<span>사업자등록번호 214-81-96569</span><br/>
+							<span class="p_erase">서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</span><br/>
+							<span class="p_erase">T. 02-585-1114</span>
+							<span>F. 02-598-1116</span><br/>
+							<span class="p_erase">E. webmaster@hsd.co.kr</span>
+							<div class="call">
+								<p>
+									<span>한솥 고객센터</span>
+									<span>02-585-1114</span>
+								</p>
+								<p>
+									<span>전국창업설명회</span>
+									<span>1811-0188</span>
+								</p>
+								<p>
+									<span>단체주문</span>
+									<span>1644-3288</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<p class="copy">COPYRIGHT&#169;㈜한솥. ALL RIGHTS RESERVED.</p>
+					<div class="f_sns">
+						<a href="#" class="insta"></a>
+						<a href="#" class="facebook"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script>
+		footInfo();
+
+		function footInfo() {
+			var footDesc = document.querySelector(".info_desc");
+
+			footDesc.addEventListener("click", viewWork);
+
+			function viewWork(e) {
+				if(footDesc.classList.contains("view")) {
+					footDesc.classList.remove("view");
+				} else {
+					footDesc.classList.add("view");
+				}	
+				e.preventDefault();
+			}
+		}
+	</script>
+</div>
+</body>
+</html>
