@@ -58,8 +58,8 @@ h3 {font-size: 35px; margin-bottom: 20px;}
 /* portfolio */
 .portfolio .explain {margin-bottom: 30px;}
 .portfolio ul {margin: 0 auto;}
-.portfolio li {float: left; width: 20%; box-sizing: border-box; border: 1px solid #efefef; position: relative;}
-.portfolio li + li {margin-left: 25px; margin-bottom: 10px;}
+.portfolio li {float: left; width: 20%; box-sizing: border-box; border: 1px solid #efefef; position: relative;  margin-bottom: 10px;}
+.portfolio li + li {margin-left: 25px;}
 .portfolio li:nth-child(5) {margin-left: 0;}
 .portfolio li .desc {
 	background-color: rgba(30, 30, 30, 0.7);
