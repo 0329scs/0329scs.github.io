@@ -42,8 +42,7 @@ window.onload = function() {
 		var conDish = globalBg.querySelector(".contents_dish");
 		var flag = false;
 		var count = 0;
-		var past = 0;
-		
+
 		var slide = $(".contents_dish").on("mousewheel DOMMouseScroll", function(e) {
 			var E = e.originalEvent;
 			var delta = 0;
@@ -82,39 +81,5 @@ window.onload = function() {
 				}
 			}
 		});
-
-		// conDish.addEventListener("scroll", frame);
-
-		function frame(delta) {
-			// var now = this.scrollTop;
-
-			if(!flag && delta < 1 && count < 5) {
-				flag = true;
-				count = count + 1;
-				setTimeout(scrollDown, 150);
-				$(conDish).animate({scrollTop : conDish.offsetTop}, 150);
-				globalBg.classList.add("scroll");
-			} else if(!flag && delta > 1 && count >= 1) {
-				flag = true;
-				setTimeout(scrollUp, 150);
-				$(conDish).animate({scrollTop : conDish.offsetTop}, 150);
-				if(count === 0) {
-					globalBg.classList.remove("scroll");
-				}
-			}
-			
-			function scrollDown() { // 휠 내림
-				conDish.classList.add("until_0" + count);
-				flag = false;
-			}
-			function scrollUp() { // 휠 올림
-				conDish.classList.remove("until_0" + count);
-				count = count - 1;
-				flag = false;
-			}
-			// past = now;
-			// console.log(now);
-			// console.log(past);
-		}
 	}
 }
