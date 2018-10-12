@@ -66,9 +66,6 @@ window.onload = function() {
 					flag = true;
 					setTimeout(scrollUp, 150);
 					$(conDish).animate({scrollTop : conDish.offsetTop}, 150);
-					if(count === 0) {
-						globalBg.classList.remove("scroll");
-					}
 				}
 				function scrollDown() { // 휠 내림
 					conDish.classList.add("until_0" + count);
@@ -77,6 +74,9 @@ window.onload = function() {
 				function scrollUp() { // 휠 올림
 					conDish.classList.remove("until_0" + count);
 					count = count - 1;
+					if(count === 0) {
+						globalBg.classList.remove("scroll");
+					}
 					flag = false;
 				}
 			}
