@@ -2,146 +2,378 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko" >
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>안녕하세요. 송창석입니다.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>안녕하세요. 송창석의 포트폴리오입니다.</title>
 	<meta name="robots" content="all" />
-	<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
-	<link href="https://fonts.googleapis.com/css?family=Gamja+Flower&amp;subset=korean" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" media="screen" href="css/re_reset.css" />
 	<style type="text/css"></style>
-	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="script/re_classlist.js"></script>
+	<script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
 </head>
-<body>
+<body id="header">
 	<div class="wrap">
-		<div class="contents clearfix">
-			<div class="my_info">
-				<div class="inner clearfix">
-					<div class="desc">
-						<h3>Song chang seok</h3>
-						<p>Web Publisher</p>
-					</div>
-					<div class="img_box"><img src="images/profile.jpg"/></div>
+		<header>
+			<div class="head_contents">
+				<div class="intro">
+					<h1>song chang seok</h1>
+					<p>web publisher</p>
 				</div>
-			</div>
-			<div class="portfolio">
-				<div class="inner">
-					<div class="explain">
-						<h3>Portfolio</h3>
-						<p>모든 포트폴리오는 HTML5와 CSS3로 작성되었습니다. 그리고 카카오를 제외한 나머지는 반응형 웹으로 제작하였습니다.<br/>JQuery는 모든 slider에 bxslider, smoothScoll(니콘)을 이용하였습니다. 나머지 click, mouseover, mouseout, scroll, resize 이벤트는 JavaScript로 제작하였습니다.<br/><strong>크로스 브라우징은 ie9을 기준으로 진행하였으며, ie9에서 애니메이션은 발생하지 않습니다.<br/><span style="color: red;">맥도날드와 월트 디즈니, 그리고 HUGE는 Chrome과 Firefox만을 기준으로 진행하였습니다.<br/>YG는 모바일 반응형 페이지에서 flexbox가 있어 최신 브라우저에서 보는 것을 권장합니다.</span></strong></p>
-					</div>
-					<ul class="clearfix">
-						<li>
-							<div class="li_wrap">
-								<img src="images/kakao_logo.jpg" alt="kakaologo"/>
-								<div class = "desc">
-									<a href="kakao/kakao_main.html">
-										<strong>Desktop</strong>
-										<h4>카카오</h4>
-										<span>ie9 / 카카오 페이지 연결</span>
-									</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="li_wrap">
-								<img src="images/mc_logo.jpg" alt="Mcdonald's logo"/>
-								<div class = "desc">
-									<a href="mcdonalds/mcdonald.html">
-										<strong>Responsive web</strong>
-										<h4>Mcdonald's</h4>
-										<span>Only Chrome &#38; Firefox</span>
-									</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="li_wrap">
-								<img src="images/yg.jpg" alt="YG logo"/>
-								<div class = "desc">
-									<a href="yg/yg.html">
-										<strong>Responsive web</strong>
-										<h4>YG</h4>
-										<span>ie9</span>
-									</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="li_wrap">
-								<img src="images/disney_logo.png" alt="disney logo"/>
-								<div class = "desc">
-									<a href="disney/waltdisney.html">
-										<strong>Responsive web</strong>
-										<h4>disney</h4>
-										<span>Only Chrome &#38; Firefox</span>
-									</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="li_wrap">
-								<img src="images/nikon_logo.svg" alt="nikon logo"/>
-								<div class = "desc">
-									<a href="nikon/nikon.html">
-										<strong>Responsive web</strong>
-										<h4>nikon</h4>
-										<span>ie9</span>
-									</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="li_wrap">
-								<img src="images/hansot1.png" alt="한솥도시락 logo"/>
-								<div class = "desc">
-									<a href="hansot/hansot(2).html">
-										<strong>Responsive web</strong>
-										<h4>한솥도시락</h4>
-										<span>ie9</span>
-									</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="li_wrap">
-								<img src="images/starbucks.png" alt="starbucks logo"/>
-								<div class = "desc">
-									<a href="starbucks/starbucks.html">
-										<strong>Responsive web</strong>
-										<h4>starbucks</h4>
-										<span>ie9</span>
-									</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="li_wrap">
-								<img src="images/m_naver02.png" alt="모바일네이버 logo"/>
-								<div class = "desc">
-									<a href="m_naver/m_naver.html">
-										<strong>mobile</strong>
-										<h4>모바일네이버</h4>
-										<span>ie9</span>
-									</a>
-								</div>
-							</div>
-						</li>
+				<nav>
+					<div class="hide">헤더메뉴</div>
+					<ul>
+						<li class="upper nav_home"><a href="#" class="now">home</a></li>
+						<li class="upper nav_skill"><a href="#">skill</a></li>
+						<li class="upper nav_portfolio"><a href="#">portfolio</a></li>
 					</ul>
-					<ul class="clearfix">
-						<li>
-							<div class="li_wrap">
-								<img src="images/huge_logo.jpg" alt="HUGE inc logo"/>
-								<div class = "desc">
-									<a href="huge/huge.html">
-										<strong>Responsive web(in pc)</strong>
-										<h4>HUGE inc</h4>
-										<span>Only Chrome &#38; Firefox</span>
-									</a>
-								</div>
-							</div>
-						</li>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="skill sec_contents">
+				<div class="arrange_center">
+					<h2>skill</h2>
+					<div class="skill_list">
+						<div class="main_skill">
+							<h4>main skill</h4>
+							<ul>
+								<li>
+									<p class="sl_title">HTML</p>
+									<div class="percent">
+										<div class="bar green">
+											<div class="label"><span>85</span>%</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<p class="sl_title">CSS</p>
+									<div class="percent">
+										<div class="bar green">
+											<div class="label"><span>80</span>%</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<p class="sl_title">반응형/웹표준</p>
+									<div class="percent">
+										<div class="bar green">
+											<div class="label"><span>78</span>%</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<p class="sl_title">Javascript</p>
+									<div class="percent">
+										<div class="bar yellow">
+											<div class="label"><span>46</span>%</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<p class="sl_title">JQuery</p>
+									<div class="percent">
+										<div class="bar red">
+											<div class="label"><span>37</span>%</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="sub_skill">
+							<h4>sub skill</h4>
+							<ul>
+								<li>github<span class="small">포트폴리오 페이지 구성</span></li>
+								<li>Vue.js<span class="small">튜토리얼 공부 및 이를 활용한 간단한 API 구성</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="portfolio sec_contents">
+				<h2>portfolio</h2>
+				<p>기본적으로 크로스브라우징은 ie9 이상을 기준으로 진행하였습니다.<br/> 포트폴리오에 따라 접근성이 다른 경우가 있습니다. 확인은 아래에서 확인 가능합니다.</p>
+				<div class="portfolio_menu">
+					<ul>
+						<li class="all"><a href="#" class="now">Show all</a></li>
+						<li class="responsive"><a href="#">Responsive</a></li>
+						<li class="pc"><a href="#">pc</a></li>
+						<li class="mobile"><a href="#">mobile</a></li>
 					</ul>
 				</div>
-			</div>
-		</div>
+				<div class="portfolio_list all">
+					<div class="show_all">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<img src="images/kakao_logo.jpg" alt="kakaologo"/>
+									<div class = "desc">
+										<a href="kakao/kakao_main.html">
+											<div class="desc_word">
+												<strong class="upper">pc</strong>
+												<h5>카카오</h5>
+												<span>ie9/카카오 페이지 연결</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/mc_logo.jpg" alt="Mcdonald's logo"/>
+									<div class = "desc">
+										<a href="mcdonalds/mcdonald.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>Mcdonald's</h4>
+												<span>Only Chrome &#38; Firefox</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/yg.jpg" alt="YG logo"/>
+									<div class = "desc">
+										<a href="yg/yg.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>YG</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/disney_logo.png" alt="disney logo"/>
+									<div class = "desc">
+										<a href="disney/waltdisney.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>disney</h4>
+												<span>Only Chrome &#38; Firefox</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/nikon_logo.svg" alt="nikon logo"/>
+									<div class = "desc">
+										<a href="nikon/nikon.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>nikon</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/hansot1.png" alt="한솥도시락 logo"/>
+									<div class = "desc">
+										<a href="hansot/hansot(2).html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>한솥도시락</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/starbucks.png" alt="starbucks logo"/>
+									<div class = "desc">
+										<a href="starbucks/starbucks.html">
+											<div class="desc_word">
+												<strong>Responsive web</strong>
+												<h4>starbucks</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/m_naver02.png" alt="모바일네이버 logo"/>
+									<div class = "desc">
+										<a href="m_naver/m_naver.html">
+											<div class="desc_word">
+												<strong>mobile</strong>
+												<h4>모바일네이버</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/huge_logo.jpg" alt="HUGE inc logo"/>
+									<div class = "desc">
+										<a href="huge/huge.html">
+											<div class="desc_word">
+												<strong class="upper">pc</strong>
+												<h4>HUGE inc</h4>
+												<span>Only Chrome &#38; Firefox</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="responsive">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<img src="images/mc_logo.jpg" alt="Mcdonald's logo"/>
+									<div class = "desc">
+										<a href="Mcdonalds/mcdonald.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>Mcdonald's</h4>
+												<span>Only Chrome &#38; Firefox</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/yg.jpg" alt="YG logo"/>
+									<div class = "desc">
+										<a href="yg/yg.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>YG</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/disney_logo.png" alt="disney logo"/>
+									<div class = "desc">
+										<a href="disney/waltdisney.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>disney</h4>
+												<span>Only Chrome &#38; Firefox</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/nikon_logo.svg" alt="nikon logo"/>
+									<div class = "desc">
+										<a href="nikon/nikon.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>nikon</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/hansot1.png" alt="한솥도시락 logo"/>
+									<div class = "desc">
+										<a href="hansot/hansot(2).html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>한솥도시락</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/starbucks.png" alt="starbucks logo"/>
+									<div class = "desc">
+										<a href="starbucks/starbucks.html">
+											<div class="desc_word">
+												<strong>Responsive</strong>
+												<h4>starbucks</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="pc">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<img src="images/kakao_logo.jpg" alt="kakaologo"/>
+									<div class = "desc">
+										<a href="kakao/kakao_main.html">
+											<div class="desc_word">
+												<strong class="upper">pc</strong>
+												<h5>카카오</h5>
+												<span>ie9/카카오 페이지 연결</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="li_wrap">
+									<img src="images/huge_logo.jpg" alt="HUGE inc logo"/>
+									<div class = "desc">
+										<a href="huge/huge.html">
+											<div class="desc_word">
+												<strong class="upper">pc</strong>
+												<h4>HUGE inc</h4>
+												<span>Only Chrome &#38; Firefox</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="mobile">
+						<ul>
+							<li>
+								<div class="li_wrap">
+									<img src="images/m_naver02.png" alt="모바일네이버 logo"/>
+									<div class = "desc">
+										<a href="m_naver/m_naver.html">
+											<div class="desc_word">
+												<strong>mobile</strong>
+												<h4>모바일네이버</h4>
+												<span>ie9</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<a href="#" class="go_to_top"></a>
 	</div>
 </body>
 </html>
