@@ -271,6 +271,9 @@ nav li a.now:after {
 	nav li a {display: inline-block;}
 	.main_skill li {display: block; width: 100%;}
 	.portfolio_list > div li {width: 48%;}
+	.portfolio_list > div li:nth-child(4) {margin-left: 2.5%;}
 	.portfolio_list > div li:nth-child(3),
-	.portfolio_list > div li:nth-child(7) {margin-left: 0;}
+	.portfolio_list > div li:nth-child(5),
+	.portfolio_list > div li:nth-child(7),
+	.portfolio_list > div li:nth-child(9) {margin-left: 0;}
 }
