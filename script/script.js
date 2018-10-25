@@ -8,6 +8,7 @@ window.onload = function () {
 	var portfolioTop = htmlEle.querySelector(".portfolio").offsetTop;
 	console.log(portfolioTop);
 	var headContents = htmlEle.querySelector(".head_contents");
+	var navTarget = headContents.querySelectorAll("nav li > a");
 
 	scrollMenu();
 
@@ -18,6 +19,7 @@ window.onload = function () {
 			var now = htmlEle.scrollTop;
 
 			navFix();
+
 			function navFix() {			
 				if(now > 0) {
 					headContents.classList.add("fix");
@@ -25,12 +27,38 @@ window.onload = function () {
 					headContents.classList.remove("fix");
 				}
 			}
+
 			if(now >= skillTop) {
 				goToTop.classList.add("show");
-				progressBar()
+				progressBar();
+				for(var i = 0 ; i < navTarget.length; i++) {
+					navTarget[i].classList.remove("now");
+
+					if(navTarget[i].parentNode.classList.contains("nav_skill")) {
+						if(now >= portfolioTop) {
+							navTarget[i].classList.remove("now");
+						} else {
+							navTarget[i].classList.add("now");
+						}
+					} else if(navTarget[i].parentNode.classList.contains("nav_portfolio")) {
+						if(now < portfolioTop) {
+							navTarget[i].classList.remove("now");
+						} else {
+							navTarget[i].classList.add("now");
+						}
+					}
+				}	
 			} else {
+				for(var i = 0 ; i < navTarget.length; i++) {
+					if(navTarget[i].parentNode.classList.contains("nav_home")) {
+						navTarget[i].classList.add("now");
+					} else {
+						navTarget[i].classList.remove("now");
+					}
+				}
 				goToTop.classList.remove("show");
 			}
+
 			function progressBar() {
 				var percentBar = htmlEle.querySelectorAll(".percent");
 				for(var i = 0; i < percentBar.length; i++) {
@@ -61,7 +89,7 @@ window.onload = function () {
 		headContents.addEventListener("click", headNavWork);
 
 		function headNavWork(e) {
-			var navTarget = headContents.querySelectorAll("nav li > a");
+			
 			for(var i = 0 ; i < navTarget.length; i++) {
 				navTarget[i].classList.remove("now");
 			}
@@ -74,11 +102,11 @@ window.onload = function () {
 			}		
 			function navMoving () {
 				if(targetParents.classList.contains("nav_home")) {
-					$(htmlEle).animate({scrollTop:headTop}, 2000);
+					$(htmlEle).animate({scrollTop:headTop}, 500);
 				} else if(targetParents.classList.contains("nav_skill")) {
-					$(htmlEle).animate({scrollTop:skillTop}, 2000);
+					$(htmlEle).animate({scrollTop:skillTop}, 500);
 				} else if(targetParents.classList.contains("nav_portfolio")) {
-					$(htmlEle).animate({scrollTop:portfolioTop}, 2000);
+					$(htmlEle).animate({scrollTop:portfolioTop}, 500);
 				} else {
 					return;
 				}
