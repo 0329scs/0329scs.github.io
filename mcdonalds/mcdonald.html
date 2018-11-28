@@ -1,678 +1,620 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>McDonald official</title>
-	<link rel="stylesheet" media="all" href="css/reset.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald official</title>
+    <link rel="stylesheet" media="all" href="css/reset.css" />
+    <link rel="stylesheet" media="all" href="css/fonts.css" />
+    <link rel="stylesheet" media="all" href="css/layout.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="re_classlist.js"></script>
-	<style></style>
-	<script></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style></style>
+    <script></script>
 </head>
-<script>
-	$(document).ready(function () {
-        var tBaSlide = $(".t_banner > ul").bxSlider({
-        	prevSelector: ".t_control .prev",
-        	nextSelector: ".t_control .next",
-        	pagerSelector: ".t_page",
-        	auto: true
-		})
-		
-		var bBaSlide = $(".b_inner > ul").bxSlider();
-
-	    sizeWork();
-	    window.addEventListener("resize", sizeWork);
-
-	    function sizeWork() {
-	    	var viewWidth = window.innerWidth;
-	    	console.log(viewWidth);
-	    	if(viewWidth < 521) {
-	    		bBaSlide.reloadSlider({
-	    			slideWidth: 505,
-			     	minSlides: 1,
-			     	maxSlides: 1,
-			     	moveSlides: 0,
-			     	prevSelector: ".b_control .prev",
-		        	nextSelector: ".b_control .next",
-		        	pagerSelector: ".b_page",
-			    	moveSlides: 1,
-					slideMargin: 1
-	    		})
-	    	} else if (viewWidth < 679) {
-	    		bBaSlide.reloadSlider({
-	    			slideWidth: 331,
-			     	minSlides: 2,
-			     	maxSlides: 2,
-			     	moveSlides: 0,
-			     	prevSelector: ".b_control .prev",
-		        	nextSelector: ".b_control .next",
-		        	pagerSelector: ".b_page",
-			    	moveSlides: 1,
-					slideMargin: 1
-	    		})
-	    	} else {
-	    		bBaSlide.reloadSlider({
-	    			slideWidth: 700,
-			     	minSlides: 3,
-			     	maxSlides: 3,
-			     	moveSlides: 0,
-			     	prevSelector: ".b_control .prev",
-        			nextSelector: ".b_control .next",
-        			pagerSelector: ".b_page",
-	    			moveSlides: 1,
-					slideMargin: 1
-	    		})
-	    	}
-	    }
-    })
-</script>
 <body>
-	<div class="wrap">
-		<header><!-- header S -->
-			<div class="inner">
-				<h1><a><img src="images/logo.png" alt="mcdonald logo" /></a></h1>
-				<a class="nav_tool"><span class="bar"><span></span></span></a>
-				<nav>
-					<ul class="nav">
-						<li class="about">
-							<a href="#" class="">ABOUT</a>
-							<div class="under_nav">
-								<div class="un_inner">
-									<ul class="picture">
-										<li>
-											<a href="">
-												<img src="images/nav_about_values.jpg" alt="" />
-												<span>Our Values</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_about_business.jpg" alt="" />
-												<span>Our Business Model</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_about_growth.jpg" alt="" />
-												<span>Our Growth Strategy</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_about_dandi.jpg" alt="" />
-												<span>Diversity &amp; Inclusion</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_about_history.jpg" alt="" />
-												<span>History</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_about_leadership.jpg" alt="" />
-												<span>Leadership</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_about_world.jpg" alt="" />
-												<span>Around the World</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="scale">
-							<a href="#" class="">SCALE FOR GOOD</a>
-							<div class="under_nav">
-								<div class="un_inner">
-									<ul class="sentence_1">
-										<li><a href="">Our Food</a></li>
-										<li><a href="">Our Planet</a></li>
-										<li><a href="">OurPeopleand Communities</a></li>
-									</ul>
-									<ul class="sentence_2">
-										<li><a href="">Our Approach</a></li>
-										<li><a href="">ESG Reporting</a></li>
-									</ul>
-									<ul class="picture">
-										<li>
-											<a href="">
-												<img src="images/navigation-global-priorities-181.jpg" alt="scale for good"/>
-												<span>Scale for good</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/navigation-beef-181.jpg" alt=""/>
-												<span>Beef Sustainability</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/navigation-packaging-181.jpg" alt=""/>
-												<span>Packagingand Recycling</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/navigation-kids-181.jpg" alt=""/>
-												<span>Commitmentto Families</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/navigation-youth-181.jpg" alt=""/>
-												<span>OurInvestment in People</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_sfg_climate.jpg" alt=""/>
-												<span>Climate Action</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="invest">
-							<a href="#" class="">INVESTORS</a>
-							<div class="under_nav">
-								<div class="un_inner">
-									<ul class="sentence_1">
-										<li><a href=""> Company Overview </a></li>
-										<li><a href=""> Financial Information </a></li>
-										<li><a href=""> Investor Events </a></li>
-									</ul>
-									<ul class="sentence_2">
-										<li><a href=""> Stock Information </a></li>
-										<li><a href=""> Shareholder Resources </a></li>
-										<li><a href=""> Corporate Governance </a></li>
-									</ul>
-									<ul class="picture">
-										<li>
-											<a href="">
-												<img src="images/nav_inv_news.jpg" alt=""/>
-												<span>Financial News</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_inv_dividend.jpg" alt=""/>
-												<span>Dividend History</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_inv_purchase.jpg" alt=""/>
-												<span>Purchasing McDonald's Stock</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_inv_governance.jpg" alt=""/>
-												<span>Corporate Governance</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="franch">
-							<a href="#" class="">FRANCHISING</a>
-							<div class="under_nav">
-								<div class="un_inner">
-									<ul class="picture">
-										<li>
-											<a href="">
-												<img src="images/nav_franch_overview.jpg" alt=""/>
-												<span>Overview</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_franch_global.jpg" alt=""/>
-												<span>Global Franchising</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_franch_faq.jpg" alt=""/>
-												<span>FAQ</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="news">
-							<a href="#" class="">NEWSROOM</a>
-							<div class="under_nav">
-								<div class="un_inner">
-									<ul class="sentence_1">
-										<li><a href=""> Press Releases </a></li>
-										<li><a href=""> Media Statements </a></li>
-									</ul>
-									<ul class="sentence_2">
-										<li><a href=""> Press Contacts </a></li>
-										<li><a href=""> Multimedia Library </a></li>
-									</ul>
-									<ul class="picture">
-										<li>
-											<a href="">
-												<img src="images/nav_news_news.jpg" alt=""/>
-												<span>Company News</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_news_about.jpg" alt=""/>
-												<span>About Our Food</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_news_people.jpg" alt=""/>
-												<span>Our People</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_news_sustainability.jpg" alt=""/>
-												<span>Scale For Good</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_news_experience.jpg" alt=""/>
-												<span>WholeNew Experience</span>
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="images/nav_news_community.jpg" alt=""/>
-												<span>McDonald's In The Community</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="search">
-							<a href="#">SEARCH</a>
-							<div class="under_nav">
-								<div class="un_inner">
-									<input type="text" title="SEARCH" placeholder="Search corporate.mcdonalds.com"/>
-									<a href="">SUBMIT</a>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<div class="nav_detail">
-							<p><a href="">About</a></p>
-							<p><a href="">Scale for Good</a></p>
-							<p><a href="">Investors</a></p>
-							<p><a href="">Franchising</a></p>
-							<p><a href="">Newsroom</a></p>
-							<p><a href="">Careers</a></p>
-					</div>
-				</nav>
-				<a class="careers" href="">Corporate Careers</a>
-			</div>
-		</header><!-- header E -->
-		<main><!-- main S -->
-			<div class="t_banner"><!-- t_banner S -->
-				<ul>
-					<li class="">
-						<img src="images/home_car_d_q12018.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>McDonald's Reports First Quarter 2018 Results</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-					<li class="">
-						<img src="images/home_car_d_climate.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>Climate Action</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-					<li class="">
-						<img src="images/home_car_d_families.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>Commitment to Families</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-					<li class="">
-						<img src="images/home_car_d_packaging.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>Packaging and Recycling</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-					<li class="">
-						<img src="images/home_car_d_growth.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>Our Growth Strategy</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-					<li class="">
-						<img src="images/home_car_d_values.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>Our Values</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-					<li class="">
-						<img src="images/home_car_d_history.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>The McDonald’s Story</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-					<li class="">
-						<img src="images/home_car_d_scale.jpg" alt=""/>
-						<div class="t_desc">
-							<strong>Scale for Good</strong>
-							<p><a href="">LEARN MORE</a></p>
-						</div>
-					</li>
-				</ul>
-				<div class="t_control">
-					<div class="prev"></div>
-					<div class="next"></div>
-				</div>
-				<div class="t_page">
-					<a href="#" class="active">a</a>
-					<a href="#">a</a>
-					<a href="#">a</a>
-					<a href="#">a</a>
-					<a href="#">a</a>
-					<a href="#">a</a>
-					<a href="#">a</a>
-					<a href="#">a</a>
-				</div>
-			</div><!-- t_banner E -->
-			<div class="m_banner"><!-- m_banner S -->
-				<ul class="clearfix">
-					<li>
-						<img src="images/home_promo_franchising.jpg" alt=""/>
-						<div class="m_desc">
-							<strong>Franchising</strong>
-							<span>Empowering small business owners.</span>
-						</div>
-						<p><a href="">Learn More</a></p>
-					</li>
-					<li>
-						<img src="images/home_promo_investors.jpg" alt=""/>
-						<div class="m_desc">
-							<strong>Investors</strong>
-							<span>Driving value for stakeholders.</span>
-						</div>
-						<p><a href="">Learn More</a></p>
-					</li>
-					<li>
-						<img src="images/home_promo_newsroom.jpg" alt=""/>
-						<div class="m_desc">
-							<strong>Newsroom</strong>
-							<span>Discover the latest McDonald's News.</span>
-						</div>
-						<p><a href="">Learn More</a></p>
-					</li>
-					<li>
-						<img src="images/home_promo_careers.jpg" alt=""/>
-						<div class="m_desc">
-							<strong>Corporate Careers</strong>
-							<span>Committing to people.</span>
-						</div>
-						<p><a href="">Learn More</a></p>
-					</li>
-				</ul>
-			</div><!-- m_banner E -->
-			<div class="b_banner"><!-- b_banner S -->
-				<h3>Follow. Post. Connect.</h3>
-				<div class="b_inner">
-					<ul class="clearfix">
-						<li>
-							<a href="#">
-								<div class="f_top">
-									<img src="images/G8w6NeDX_normal.jpg" alt="logo" />
-									<div class="t_left">
-										<strong>McDonald's</strong>
-										<span>@McDonaldsCorp</span>
-									</div>
-									<div class="t_right">
-										<strong>11h</strong>
-										<span></span>
-									</div>
-								</div>
-								<div class="f_bottom">
-									<p>twitter sentence</p>
-									<div class="twit"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="images/DdRKL8XVwAEj7u9.jpg" alt="twiiter images"/>
-								<div class="f_top">
-									<img src="images/G8w6NeDX_normal.jpg" alt="logo" />
-									<div class="t_left">
-										<strong>McDonald's</strong>
-										<span>@McDonaldsCorp</span>
-									</div>
-									<div class="t_right">
-										<strong>19h</strong>
-										<span></span>
-									</div>
-								</div>
-								<div class="f_bottom">
-									<p>twitter sentence</p>
-									<div class="twit"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="f_top">
-									<img src="images/G8w6NeDX_normal.jpg" alt="logo" />
-									<div class="t_left">
-										<strong>McDonald's</strong>
-										<span>@McDonaldsCorp</span>
-									</div>
-									<div class="t_right">
-										<strong>May 14, 2018</strong>
-										<span></span>
-									</div>
-								</div>
-								<div class="f_bottom">
-									<p>twitter sentence</p>
-									<div class="twit"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="images/DdPjMGRWkAQ35Fj.jpg" alt="twiiter images"/>
-								<div class="f_top">
-									<img src="images/G8w6NeDX_normal.jpg" alt="logo" />
-									<div class="t_left">
-										<strong>McDonald's</strong>
-										<span>@McDonaldsCorp</span>
-									</div>
-									<div class="t_right">
-										<strong>May 14, 2018</strong>
-										<span></span>
-									</div>
-								</div>
-								<div class="f_bottom">
-									<p>twitter sentence</p>
-									<div class="twit"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="images/DdMTzyeXcAI6u62.jpg" alt="twiiter images"/>
-								<div class="f_top">
-									<img src="images/G8w6NeDX_normal.jpg" alt="logo" />
-									<div class="t_left">
-										<strong>McDonald's</strong>
-										<span>@McDonaldsCorp</span>
-									</div>
-									<div class="t_right">
-										<strong>May 14, 2018</strong>
-										<span></span>
-									</div>
-								</div>
-								<div class="f_bottom">
-									<p>twitter sentence</p>
-									<div class="twit"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="f_top">
-									<img src="images/G8w6NeDX_normal.jpg" alt="logo" />
-									<div class="t_left">
-										<strong>@McDonald's</strong>
-										<span>McDonaldsCorp</span>
-									</div>
-									<div class="t_right">
-										<strong>May 13, 2018</strong>
-										<span></span>
-									</div>
-								</div>
-								<div class="f_bottom">
-									<p>twitter sentence</p>
-									<div class="twit"></div>
-								</div>
-							</a>
-						</li>
-					</ul>
-					<div class="b_control">
-						<div class="prev"></div>
-						<div class="next"></div>
-					</div>
-					<div class="b_page">
-						<a href="#" class="">a</a>
-						<a href="#" class="aside">a</a>
-						<a href="#" class="aside">a</a>
-						<a href="#">a</a>
-						<a href="#">a</a>
-						<a href="#">a</a>
-					</div>
-				</div>
-			</div><!-- b_banner E -->
-		</main><!-- main E -->
-		<footer><!-- footer S -->
-			<div class="t_footer">
-				<ul class="inner clearfix">
-					<li>
-						<strong><a href="">About</a></strong>
-						<div class="menu">
-							<ul>
-								<li><a href="">Our Values</a></li>
-								<li><a href="">Our Business Model</a></li>
-								<li><a href="">Our Growth Strategy</a></li>
-								<li><a href="">Global Diversity, Inclusion & Community Engagement</a></li>
-								<li><a href="">History</a></li>
-								<li><a href="">Leadership</a></li>
-								<li><a href="">Around the World</a></li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<strong><a href="">Scale for Good</a></strong>
-						<div class="menu">
-							<ul>
-								<li><a href="">Our Food</a></li>
-								<li><a href="">Our Planet</a></li>
-								<li><a href="">Our People and Communities</a></li>
-								<li><a href="">Our Approach</a></li>
-								<li><a href="">ESG Reporting</a></li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<strong><a href="">Investors</a></strong>
-						<div class="menu">
-							<ul>
-								<li><a href="">Company Overview</a></li>
-								<li><a href="">Financial Information</a></li>
-								<li><a href="">Investor Events</a></li>
-								<li><a href="">Stock Information</a></li>
-								<li><a href="">Shareholder Resources</a></li>
-								<li><a href="">Corporate Governance</a></li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<strong><a href="">Franchising</a></strong>
-						<div class="menu">
-							<ul>
-								<li><a href="">Overview</a></li>
-								<li><a href="">Global Franchising</a></li>
-								<li><a href="">FAQ</a></li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<strong><a href="">Newsroom</a></strong>
-						<div class="menu">
-							<ul>
-								<li><a href="">Press Releases</a></li>
-								<li><a href="">Media Statements</a></li>
-								<li><a href="">Press Contacts</a></li>
-								<li><a href="">Multimedia Library</a></li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<strong><a href="">Careers</a></strong>
-						<div class="menu">
-							<ul>
-								<li><a href="">Corporate Careers</a></li>
-								<li><a href="">US Restaurant Jobs</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="b_footer">
-				<div class="inner clearfix">
-					<div class="b_footer_left">
-						<p class="clearfix">
-							<strong>Stay Connected</strong>
-							<a class="twit"></a>
-							<a class="in"></a>
-						</p>
-					</div>
-					<div class="b_footer_bottom clearfix">
-						<p class="clearfix">
-								<span>
-									<a href="">PRIVACY</a>
-								</span>
-								<span>
-									<a href="">TERMS &amp; CONDITIONS</a>
-								</span>
-							</p>	
-						<small>&#169;2017-2018 McDonald's. All Rights Reserved.</small>
-					</div>
-				</div>
-			</div>
-		</footer><!-- footer E -->
-	</div>
+    <div id="wrap"><!--wrap 시작-->
+        <header id="header"><!-- header 시작 -->
+            <div class="header_inner">
+                <h1><a href="#n"><img src="images/logo.png" alt="mcdonald logo" /></a></h1>
+                <a class="nav_tool"><span class="bar"><span></span></span></a>
+                <nav>
+                    <ul class="nav_item">
+                        <li class="about">
+                            <a href="#n" class="nav_btn">ABOUT</a>
+                            <div class="under_nav">
+                                <div class="under_nav_inner">
+                                    <ul class="picture">
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_about_values.jpg" alt="Our Values" />
+                                                <span>Our Values</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_about_business.jpg" alt="Our Business Model" />
+                                                <span>Our Business Model</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_about_growth.jpg" alt="Our Growth Strategy" />
+                                                <span>Our Growth Strategy</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_about_dandi.jpg" alt="Diversity &amp; Inclusion" />
+                                                <span>Diversity &amp; Inclusion</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_about_history.jpg" alt="History" />
+                                                <span>History</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_about_leadership.jpg" alt="Leadership" />
+                                                <span>Leadership</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_about_world.jpg" alt="Around the World" />
+                                                <span>Around the World</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="scale">
+                            <a href="#n" class="nav_btn">SCALE FOR GOOD</a>
+                            <div class="under_nav">
+                                <div class="under_nav_inner">
+                                    <ul class="sentence_1">
+                                        <li><a href="#n">Our Food</a></li>
+                                        <li><a href="#n">Our Planet</a></li>
+                                        <li><a href="#n">OurPeopleand Communities</a></li>
+                                    </ul>
+                                    <ul class="sentence_2">
+                                        <li><a href="#n">Our Approach</a></li>
+                                        <li><a href="#n">ESG Reporting</a></li>
+                                    </ul>
+                                    <ul class="picture">
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/navigation-global-priorities-181.jpg" alt="scale for good" />
+                                                <span class="hide">Scale for good</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/navigation-beef-181.jpg" alt="Beef Sustainability" />
+                                                <span>Beef Sustainability</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/navigation-packaging-181.jpg" alt="Packagingand Recycling" />
+                                                <span>Packagingand Recycling</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/navigation-kids-181.jpg" alt="Commitmentto Families" />
+                                                <span>Commitmentto Families</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/navigation-youth-181.jpg" alt="OurInvestment in People" />
+                                                <span>OurInvestment in People</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_sfg_climate.jpg" alt="Climate Action" />
+                                                <span>Climate Action</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="invest">
+                            <a href="#n" class="nav_btn">INVESTORS</a>
+                            <div class="under_nav">
+                                <div class="under_nav_inner">
+                                    <ul class="sentence_1">
+                                        <li><a href="#n"> Company Overview </a></li>
+                                        <li><a href="#n"> Financial Information </a></li>
+                                        <li><a href="#n"> Investor Events </a></li>
+                                    </ul>
+                                    <ul class="sentence_2">
+                                        <li><a href="#n"> Stock Information </a></li>
+                                        <li><a href="#n"> Shareholder Resources </a></li>
+                                        <li><a href="#n"> Corporate Governance </a></li>
+                                    </ul>
+                                    <ul class="picture">
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_inv_news.jpg" alt="Financial News" />
+                                                <span>Financial News</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_inv_dividend.jpg" alt="Dividend History" />
+                                                <span>Dividend History</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_inv_purchase.jpg" alt="Purchasing McDonald's Stock" />
+                                                <span>Purchasing McDonald's Stock</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_inv_governance.jpg" alt="Corporate Governance" />
+                                                <span>Corporate Governance</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="franch">
+                            <a href="#n" class="nav_btn">FRANCHISING</a>
+                            <div class="under_nav">
+                                <div class="under_nav_inner">
+                                    <ul class="picture">
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_franch_overview.jpg" alt="Overview" />
+                                                <span>Overview</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_franch_global.jpg" alt="Global Franchising" />
+                                                <span>Global Franchising</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_franch_faq.jpg" alt="FAQ" />
+                                                <span>FAQ</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="news">
+                            <a href="#n" class="nav_btn">NEWSROOM</a>
+                            <div class="under_nav">
+                                <div class="under_nav_inner">
+                                    <ul class="sentence_1">
+                                        <li><a href="#n"> Press Releases </a></li>
+                                        <li><a href="#n"> Media Statements </a></li>
+                                    </ul>
+                                    <ul class="sentence_2">
+                                        <li><a href="#n"> Press Contacts </a></li>
+                                        <li><a href="#n"> Multimedia Library </a></li>
+                                    </ul>
+                                    <ul class="picture">
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_news_news.jpg" alt="Company News" />
+                                                <span>Company News</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_news_about.jpg" alt="About Our Food" />
+                                                <span>About Our Food</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_news_people.jpg" alt="Our People" />
+                                                <span>Our People</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_news_sustainability.jpg" alt="Scale For Good" />
+                                                <span>Scale For Good</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_news_experience.jpg" alt="WholeNew Experience" />
+                                                <span>WholeNew Experience</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <img src="images/nav_news_community.jpg" alt="McDonald's In The Community" />
+                                                <span>McDonald's In The Community</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="search">
+                            <a href="#n" class="nav_btn">SEARCH</a>
+                            <div class="under_nav">
+                                <div class="under_nav_inner">
+                                    <input type="text" title="SEARCH" placeholder="Search corporate.mcdonalds.com" />
+                                    <a href="#n#n">SUBMIT</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nav_detail">
+                        <p><a href="#n">About</a></p>
+                        <p><a href="#n">Scale for Good</a></p>
+                        <p><a href="#n">Investors</a></p>
+                        <p><a href="#n">Franchising</a></p>
+                        <p><a href="#n">Newsroom</a></p>
+                        <p><a href="#n">Careers</a></p>
+                    </div>
+                </nav>
+                <a class="careers" href="#n">Corporate Careers</a>
+            </div>
+        </header><!-- header 끝 -->
+        <main id="container"><!-- main 시작 -->
+            <section class="top_banner">
+                <ul>
+                    <li class="">
+                        <img src="images/home_car_d_q12018.jpg" alt="McDonald's Reports First Quarter 2018 Results" />
+                        <div class="t_desc">
+                            <strong>McDonald's Reports First Quarter 2018 Results</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="images/home_car_d_climate.jpg" alt="Climate Action" />
+                        <div class="t_desc">
+                            <strong>Climate Action</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="images/home_car_d_families.jpg" alt="Commitment to Families" />
+                        <div class="t_desc">
+                            <strong>Commitment to Families</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="images/home_car_d_packaging.jpg" alt="Packaging and Recycling" />
+                        <div class="t_desc">
+                            <strong>Packaging and Recycling</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="images/home_car_d_growth.jpg" alt="Our Growth Strategy" />
+                        <div class="t_desc">
+                            <strong>Our Growth Strategy</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="images/home_car_d_values.jpg" alt="Our Values" />
+                        <div class="t_desc">
+                            <strong>Our Values</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="images/home_car_d_history.jpg" alt="The McDonald’s Story" />
+                        <div class="t_desc">
+                            <strong>The McDonald’s Story</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="images/home_car_d_scale.jpg" alt="Scale for Good" />
+                        <div class="t_desc">
+                            <strong>Scale for Good</strong>
+                            <p><a href="#n">LEARN MORE</a></p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="t_control">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
+                <div class="t_page">
+                    <a href="#n" class="active">a</a>
+                    <a href="#n">a</a>
+                    <a href="#n">a</a>
+                    <a href="#n">a</a>
+                    <a href="#n">a</a>
+                    <a href="#n">a</a>
+                    <a href="#n">a</a>
+                    <a href="#n">a</a>
+                </div>
+            </section>
+            <section class="mid_banner">
+                <ul class="clearfix">
+                    <li>
+                        <img src="images/home_promo_franchising.jpg" alt="Franchising" />
+                        <div class="m_desc">
+                            <strong>Franchising</strong>
+                            <span>Empowering small business owners.</span>
+                        </div>
+                        <p><a href="#n" class="mid_banner_btn">Learn More</a></p>
+                    </li>
+                    <li>
+                        <img src="images/home_promo_investors.jpg" alt="Investors" />
+                        <div class="m_desc">
+                            <strong>Investors</strong>
+                            <span>Driving value for stakeholders.</span>
+                        </div>
+                        <p><a href="#n" class="mid_banner_btn">Learn More</a></p>
+                    </li>
+                    <li>
+                        <img src="images/home_promo_newsroom.jpg" alt="Newsroom" />
+                        <div class="m_desc">
+                            <strong>Newsroom</strong>
+                            <span>Discover the latest McDonald's News.</span>
+                        </div>
+                        <p><a href="#n" class="mid_banner_btn">Learn More</a></p>
+                    </li>
+                    <li>
+                        <img src="images/home_promo_careers.jpg" alt="Corporate Careers" />
+                        <div class="m_desc">
+                            <strong>Corporate Careers</strong>
+                            <span>Committing to people.</span>
+                        </div>
+                        <p><a href="#n" class="mid_banner_btn">Learn More</a></p>
+                    </li>
+                </ul>
+            </section>
+            <section class="btm_banner">
+                <h3>Follow. Post. Connect.</h3>
+                <div class="b_inner">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#n">
+                                <div class="f_top">
+                                    <img src="images/G8w6NeDX_normal.jpg" alt="logo" />
+                                    <div class="t_left">
+                                        <strong>McDonald's</strong>
+                                        <span>@McDonaldsCorp</span>
+                                    </div>
+                                    <div class="t_right">
+                                        <strong>11h</strong>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="f_bottom">
+                                    <p>twitter sentence</p>
+                                    <div class="twit"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <img src="images/DdRKL8XVwAEj7u9.jpg" alt="twiiter images" />
+                                <div class="f_top">
+                                    <img src="images/G8w6NeDX_normal.jpg" alt="logo" />
+                                    <div class="t_left">
+                                        <strong>McDonald's</strong>
+                                        <span>@McDonaldsCorp</span>
+                                    </div>
+                                    <div class="t_right">
+                                        <strong>19h</strong>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="f_bottom">
+                                    <p>twitter sentence</p>
+                                    <div class="twit"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="f_top">
+                                    <img src="images/G8w6NeDX_normal.jpg" alt="logo" />
+                                    <div class="t_left">
+                                        <strong>McDonald's</strong>
+                                        <span>@McDonaldsCorp</span>
+                                    </div>
+                                    <div class="t_right">
+                                        <strong>May 14, 2018</strong>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="f_bottom">
+                                    <p>twitter sentence</p>
+                                    <div class="twit"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <img src="images/DdPjMGRWkAQ35Fj.jpg" alt="twiiter images" />
+                                <div class="f_top">
+                                    <img src="images/G8w6NeDX_normal.jpg" alt="logo" />
+                                    <div class="t_left">
+                                        <strong>McDonald's</strong>
+                                        <span>@McDonaldsCorp</span>
+                                    </div>
+                                    <div class="t_right">
+                                        <strong>May 14, 2018</strong>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="f_bottom">
+                                    <p>twitter sentence</p>
+                                    <div class="twit"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <img src="images/DdMTzyeXcAI6u62.jpg" alt="twiiter images" />
+                                <div class="f_top">
+                                    <img src="images/G8w6NeDX_normal.jpg" alt="logo" />
+                                    <div class="t_left">
+                                        <strong>McDonald's</strong>
+                                        <span>@McDonaldsCorp</span>
+                                    </div>
+                                    <div class="t_right">
+                                        <strong>May 14, 2018</strong>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="f_bottom">
+                                    <p>twitter sentence</p>
+                                    <div class="twit"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="f_top">
+                                    <img src="images/G8w6NeDX_normal.jpg" alt="logo" />
+                                    <div class="t_left">
+                                        <strong>@McDonald's</strong>
+                                        <span>McDonaldsCorp</span>
+                                    </div>
+                                    <div class="t_right">
+                                        <strong>May 13, 2018</strong>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="f_bottom">
+                                    <p>twitter sentence</p>
+                                    <div class="twit"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="b_control">
+                        <div class="prev"></div>
+                        <div class="next"></div>
+                    </div>
+                    <div class="b_page">
+                        <a href="#n" class="">a</a>
+                        <a href="#n" class="aside">a</a>
+                        <a href="#n" class="aside">a</a>
+                        <a href="#n">a</a>
+                        <a href="#n">a</a>
+                        <a href="#n">a</a>
+                    </div>
+                </div>
+            </section>
+        </main><!-- main 끝 -->
+        <footer id="footer"><!-- footer 시작 -->
+            <div class="footer_top">
+                <ul class="clearfix footer_top_in">
+                    <li>
+                        <strong><a href="#n">About</a></strong>
+                        <div class="footer_under_menu_item">
+                            <ul>
+                                <li><a href="#n">Our Values</a></li>
+                                <li><a href="#n">Our Business Model</a></li>
+                                <li><a href="#n">Our Growth Strategy</a></li>
+                                <li><a href="#n">Global Diversity, Inclusion & Community Engagement</a></li>
+                                <li><a href="#n">History</a></li>
+                                <li><a href="#n">Leadership</a></li>
+                                <li><a href="#n">Around the World</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong><a href="#n">Scale for Good</a></strong>
+                        <div class="menu footer_under_menu_item">
+                            <ul>
+                                <li><a href="#n">Our Food</a></li>
+                                <li><a href="#n">Our Planet</a></li>
+                                <li><a href="#n">Our People and Communities</a></li>
+                                <li><a href="#n">Our Approach</a></li>
+                                <li><a href="#n">ESG Reporting</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong><a href="#n">Investors</a></strong>
+                        <div class="menu footer_under_menu_item">
+                            <ul>
+                                <li><a href="#n">Company Overview</a></li>
+                                <li><a href="#n">Financial Information</a></li>
+                                <li><a href="#n">Investor Events</a></li>
+                                <li><a href="#n">Stock Information</a></li>
+                                <li><a href="#n">Shareholder Resources</a></li>
+                                <li><a href="#n">Corporate Governance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong><a href="#n">Franchising</a></strong>
+                        <div class="menu footer_under_menu_item">
+                            <ul>
+                                <li><a href="#n">Overview</a></li>
+                                <li><a href="#n">Global Franchising</a></li>
+                                <li><a href="#n">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong><a href="#n">Newsroom</a></strong>
+                        <div class="menu footer_under_menu_item">
+                            <ul>
+                                <li><a href="#n">Press Releases</a></li>
+                                <li><a href="#n">Media Statements</a></li>
+                                <li><a href="#n">Press Contacts</a></li>
+                                <li><a href="#n">Multimedia Library</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong><a href="#n">Careers</a></strong>
+                        <div class="menu footer_under_menu_item">
+                            <ul>
+                                <li><a href="#n">Corporate Careers</a></li>
+                                <li><a href="#n">US Restaurant Jobs</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_btm">
+                <div class="clearfix footer_btm_in">
+                    <div class="footer_btm_left">
+                        <p class="clearfix">
+                            <strong>Stay Connected</strong>
+                            <a class="twit" href="#n"></a>
+                            <a class="in" href="#n"></a>
+                        </p>
+                    </div>
+                    <div class="clearfix copyright">
+                        <p class="clearfix">
+                            <span><a href="#n">PRIVACY</a></span>
+                            <span><a href="#n">TERMS &amp; CONDITIONS</a></span>
+                        </p>
+                        <small>&#169;2017-2018 McDonald's. All Rights Reserved.</small>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- footer 끝 -->
+    </div><!--wrap 끝-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/re_classlist.js"></script>
 </body>
 </html>

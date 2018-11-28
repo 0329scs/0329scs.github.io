@@ -1,0 +1,489 @@
+/* 공통 */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: top;
+}
+
+.hide {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.small {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 12.5px;
+}
+
+.section_contents {
+    padding: 20px 25px;
+    width: 100%;
+}
+
+.section_contents h2 {
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.section_contents h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+nav li a:hover,
+.portfolio_menu li a:hover {
+    opacity: 0.7;
+}
+
+
+/* go_to_top */
+
+.go_to_top {
+    opacity: 0;
+    visibility: hidden;
+    -moz-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+}
+
+.go_to_top.show {
+    display: block;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #000;
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.go_to_top:hover {
+    opacity: 0.8;
+}
+
+.go_to_top:before {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    content: url(../images/up.svg);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+
+/* wrap */
+
+.wrap {
+    width: 100%;
+}
+
+
+/* header */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+}
+
+.header_contents {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    text-align: center;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.header_contents.fix {
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    -ms-transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+}
+
+.header_contents * {
+    color: #fff;
+}
+
+.header_contents>.intro {
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    max-height: 500px;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.header_contents.fix>.intro {
+    margin-bottom: 0;
+    max-height: 0;
+}
+
+.intro h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.intro p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav ul {
+    margin: 0 auto;
+    font-size: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    font-size: 1.25rem;
+}
+
+nav li+li {
+    margin-left: 4rem;
+}
+
+.header_contents li a {
+    display: block;
+    padding: 0.75rem;
+    line-height: 30px;
+    color: #fff;
+}
+
+nav li a.now {
+    color: #fff;
+}
+
+nav li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #fff;
+    -ms-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -webkit-transition: width 0.5s ease;
+}
+
+nav li a.now:after {
+    width: 100%;
+}
+
+
+/* skill */
+
+.skill * {
+    color: #000;
+}
+
+.skill h2,
+.skill h4 {
+    margin-bottom: 0.75rem;
+}
+
+.main_skill {
+    margin-bottom: 0.5rem;
+}
+
+.main_skill ul {
+    font-size: 0;
+}
+
+.main_skill li {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 30%;
+}
+
+.main_skill li+li {
+    margin-left: 20px;
+}
+
+.skill_list.arrived .img_box_wrap {
+    height: auto;
+    max-height: 800px;
+}
+
+.img_box_wrap {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+.img_box_wrap img {
+    width: 100%;
+}
+
+.sub_skill ul {
+    padding-left: 1rem;
+}
+
+.sub_skill ul li+li {
+    margin-top: 0.5rem;
+}
+
+
+/* portfolio */
+
+.portfolio {
+    padding-bottom: 0;
+}
+
+.portfolio * {
+    color: #000;
+}
+
+.portfolio p {
+    margin: 0.75rem 0;
+    padding-left: 0.75rem;
+    line-height: 1.5;
+}
+
+.portfolio_menu {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.portfolio_menu ul {
+    font-size: 0;
+}
+
+.portfolio_menu li {
+    display: inline-block;
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.portfolio_menu li+li {
+    margin-left: 1rem;
+}
+
+.portfolio_menu li a {
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    -ms-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+}
+
+.portfolio_menu li a.now {
+    color: #fa0d2e;
+}
+
+.portfolio_menu li a.now:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fa0d2e;
+}
+
+.portfolio_list>div {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    -ms-transition: max-height 0.5s ease, opacity 0.5s ease;
+    -moz-transition: max-height 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.portfolio_list.all .show_all {
+    overflow: visible;
+    max-height: 700px;
+    opacity: 1;
+}
+
+.portfolio_list.responsive .responsive {
+    overflow: visible;
+    max-height: 700px;
+    opacity: 1;
+}
+
+.portfolio_list.pc .pc {
+    overflow: visible;
+    max-height: 700px;
+    opacity: 1;
+}
+
+.portfolio_list.mobile .mobile {
+    overflow: visible;
+    max-height: 700px;
+    opacity: 1;
+}
+
+.portfolio_list ul {
+    font-size: 0;
+}
+
+.portfolio_list li {
+    display: inline-block;
+    position: relative;
+    width: 23.125%;
+    margin-bottom: 2.5%;
+    font-size: 1rem;
+    border: 1px dotted #aeaeae;
+}
+
+.portfolio_list li+li {
+    margin-left: 2.5%;
+}
+
+.portfolio_list li:nth-child(5),
+.portfolio_list li:nth-child(9) {
+    margin-left: 0;
+}
+
+.item_wrap img {
+    width: 100%;
+}
+
+.portfolio_list li .desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #000;
+    opacity: 0.7;
+    height: 0;
+    overflow: hidden;
+    -ms-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+}
+
+.portfolio_list li:hover .desc {
+    height: 100%;
+}
+
+.desc a {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.desc_word {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    margin-bottom: 0;
+}
+
+.desc a * {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.desc_word span {
+    font-size: 13px;
+}
+
+.desc_word strong {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio_list>div li {
+        width: 31%;
+    }
+    .portfolio_list>div li:nth-child(5),
+    .portfolio_list>div li:nth-child(9) {
+        margin-left: 2.5%;
+    }
+    .portfolio_list>div li:nth-child(4),
+    .portfolio_list>div li:nth-child(7) {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .go_to_top.show {
+        width: 45px;
+        height: 45px;
+    }
+    .go_to_top:before {
+        width: 20px;
+        height: 20px;
+    }
+    nav li {
+        display: block;
+        width: 100%;
+    }
+    nav li+li {
+        margin-left: 0;
+    }
+    .head_contents nav li a {
+        display: inline-block;
+    }
+    .main_skill li {
+        display: block;
+        width: 100%;
+    }
+    .main_skill li + li {margin-left: 0;}
+    .portfolio_list>div li {
+        width: 48%;
+    }
+    .portfolio_list>div li:nth-child(4) {
+        margin-left: 2.5%;
+    }
+    .portfolio_list>div li:nth-child(3),
+    .portfolio_list>div li:nth-child(5),
+    .portfolio_list>div li:nth-child(7),
+    .portfolio_list>div li:nth-child(9) {
+        margin-left: 0;
+    }
+}

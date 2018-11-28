@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "flexslider-icon";
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/flexslider-icon.woff) format("woff");
+} /* 화살표 */
+@font-face {
+	font-family: "FontAwesome";
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/fontawesome-webfont.woff2) format("woff2");
+} /* 돋보기 */
+@font-face {
+	font-family: "pwe_icon";
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/pwe_icons.woff) format("woff");
+} /* 트위터 */
+@font-face {
+	font-family: "LovinSansWeb-Black";
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/LovinSansWeb-Black.woff) format("woff");
+}
+@font-face {
+	font-family: "LovinSansWeb-Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/LovinSansWeb-Bold.woff) format("woff");
+}
+@font-face {
+	font-family: "LovinSansWeb-Medium";
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/LovinSansWeb-Medium.woff) format("woff");
+}
+@font-face {
+	font-family: "LovinSansWeb-Regular";
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/LovinSansWeb-Regular.woff) format("woff");
+}

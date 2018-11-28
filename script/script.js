@@ -1,165 +1,146 @@
-window.onload = function () {
-	var htmlEle = document.querySelector("html");
-	var goToTop = htmlEle.querySelector(".go_to_top");
-	var headTop = htmlEle.querySelector("header").offsetTop;
-	console.log(headTop);
-	var skillTop = htmlEle.querySelector(".skill").offsetTop;
-	console.log(skillTop);
-	var portfolioTop = htmlEle.querySelector(".portfolio").offsetTop;
-	console.log(portfolioTop);
-	var headContents = htmlEle.querySelector(".head_contents");
-	var navTarget = headContents.querySelectorAll("nav li > a");
+eventPackage();
 
-	scrollMenu();
+function eventPackage() {
+    var htmlEle = document.querySelector("html");
+    var headContents = htmlEle.querySelector(".header_contents");
+    var goToTopBtn = document.querySelector(".go_to_top");
 
-	function scrollMenu() {
-		document.addEventListener("scroll", scrollWork);
+    scrollEvent();
 
-		function scrollWork() {
-			var now = htmlEle.scrollTop;
+    function scrollEvent() {
+        document.addEventListener("scroll", scrollWork);
 
-			navFix();
+        function scrollWork() {
+            var now = htmlEle.scrollTop;
 
-			function navFix() {			
-				if(now > 0) {
-					headContents.classList.add("fix");
-				} else {
-					headContents.classList.remove("fix");
-				}
-			}
+            navFix();
 
-			if(now >= skillTop) {
-				goToTop.classList.add("show");
-				progressBar();
-				for(var i = 0 ; i < navTarget.length; i++) {
-					navTarget[i].classList.remove("now");
+            function navFix() {
+                if (now > 0) {
+                    headContents.classList.add("fix");
+                    goToTopBtn.classList.add("show");
+                    var skillTop = htmlEle.querySelector(".skill").offsetTop;
 
-					if(navTarget[i].parentNode.classList.contains("nav_skill")) {
-						if(now >= portfolioTop) {
-							navTarget[i].classList.remove("now");
-						} else {
-							navTarget[i].classList.add("now");
-						}
-					} else if(navTarget[i].parentNode.classList.contains("nav_portfolio")) {
-						if(now < portfolioTop) {
-							navTarget[i].classList.remove("now");
-						} else {
-							navTarget[i].classList.add("now");
-						}
-					}
-				}	
-			} else {
-				for(var i = 0 ; i < navTarget.length; i++) {
-					if(navTarget[i].parentNode.classList.contains("nav_home")) {
-						navTarget[i].classList.add("now");
-					} else {
-						navTarget[i].classList.remove("now");
-					}
-				}
-				goToTop.classList.remove("show");
-			}
+                    skillSectionAnimate(now, skillTop);
 
-			function progressBar() {
-				var percentBar = htmlEle.querySelectorAll(".percent");
-				for(var i = 0; i < percentBar.length; i++) {
-					var valueBar = percentBar[i].querySelector(".bar");
-					var labelBar = valueBar.querySelector(".label > span");
-					var barValue = [];
-					barValue.push(valueBar);
-					var labelValue = [];
-					labelValue.push(labelBar.innerHTML);
-					var width = 1;
-					var fillBar = setInterval(fillBarWork(labelValue), 5000);
+                    function skillSectionAnimate(nowPass, skillTopPass) {
 
-					function fillBarWork(labelValue) {
-						if(width >= labelValue) {
-							clearInterval(fillBar);
-						} else {
-							valueBar.style.width = labelValue + "%";
-						}
-					}
-				}
-			}
-		}	
-	}
+                        var mainSkillList = htmlEle.querySelector(".skill_list");
 
-	clickMenu();
+                        if (nowPass >= skillTopPass) {
+                            mainSkillList.classList.add("arrived");
+                        } else {
+                            return;
+                        }
+                    }
+                } else {
+                    headContents.classList.remove("fix");
+                    goToTopBtn.classList.remove("show");
+                }
+            }
+        }
+    }
 
-	function clickMenu() {
-		headContents.addEventListener("click", headNavWork);
+    clickEvent();
 
-		function headNavWork(e) {
-			
-			for(var i = 0 ; i < navTarget.length; i++) {
-				navTarget[i].classList.remove("now");
-			}
-			e.target.classList.add("now");
-			var targetParents = e.target.parentNode;
-			if(targetParents.nodeName != "LI") {
-				return;
-			} else {
-				navMoving();
-			}		
-			function navMoving () {
-				if(targetParents.classList.contains("nav_home")) {
-					$(htmlEle).animate({scrollTop:headTop}, 500);
-				} else if(targetParents.classList.contains("nav_skill")) {
-					$(htmlEle).animate({scrollTop:skillTop}, 500);
-				} else if(targetParents.classList.contains("nav_portfolio")) {
-					$(htmlEle).animate({scrollTop:portfolioTop}, 500);
-				} else {
-					return;
-				}
-			}
-			e.preventDefault();
-		}
+    function clickEvent() {
+        var headTop = htmlEle.querySelector("header").offsetTop;
+        var skillTop = htmlEle.querySelector(".skill").offsetTop;
+        var portfolioTop = htmlEle.querySelector(".portfolio_list").offsetTop;
 
-		var portfoliocontents = htmlEle.querySelector(".portfolio");
-		var portfolioMenu = portfoliocontents.querySelector(".portfolio_menu");
+        goToTop();
 
-		portfolioMenu.addEventListener("click", portfolioWork);
+        function goToTop() {
+            goToTopBtn.addEventListener("click", smoothToTop);
 
-		function portfolioWork(e) {
-			var portfolioMenuTarget = portfolioMenu.querySelectorAll("li > a")
-			for(var i = 0 ; i < portfolioMenuTarget.length; i++) {
-				portfolioMenuTarget[i].classList.remove("now");
-			}
-			e.target.classList.add("now");
-			var targetParents = e.target.parentNode;
-			console.log(targetParents);
-			if(targetParents.nodeName != "LI") {
-				return;
-			} else {
-				portfolioMoving();
-			}
-			function portfolioMoving() {
-				var portfolioList = portfoliocontents.querySelector(".portfolio_list");
-				console.log(portfolioList);
-				if(targetParents.classList.contains("all")) {
-					portfolioList.classList.remove("responsive");
-					portfolioList.classList.remove("pc");
-					portfolioList.classList.remove("mobile");
-					portfolioList.classList.add("all");
-				} else if(targetParents.classList.contains("responsive")) {
-					portfolioList.classList.remove("all");
-					portfolioList.classList.remove("pc");
-					portfolioList.classList.remove("mobile");
-					portfolioList.classList.add("responsive");
-				} else if(targetParents.classList.contains("pc")) {
-					portfolioList.classList.remove("all");
-					portfolioList.classList.remove("responsive");
-					portfolioList.classList.remove("mobile");
-					portfolioList.classList.add("pc");
-				} else if(targetParents.classList.contains("mobile")) {
-					portfolioList.classList.remove("all");
-					portfolioList.classList.remove("responsive");
-					portfolioList.classList.remove("pc");
-					portfolioList.classList.add("mobile");
-				} else {
-					return;
-				}
-			}
-			e.preventDefault();
-		}
-	}
+            function smoothToTop() {
+                $(htmlEle).animate({ scrollTop: headTop }, 500);
+            }
+        }
+        navClickEvent();
+
+        function navClickEvent() {
+            var headNav = headContents.querySelector("nav");
+
+            headNav.addEventListener("click", goToLocation);
+
+            function goToLocation(event) {
+                if (event.target.nodeName != "A") {
+                    return;
+                } else {
+                    var targetMenu = event.target;
+                    var totalMenu = headNav.querySelectorAll("a");
+
+                    for (var i = 0; i < totalMenu.length; i++) {
+                        totalMenu[i].classList.remove("now");
+                    }
+                    targetMenu.classList.add("now");
+
+                    movingEvent(targetMenu);
+
+                    function movingEvent(targetMenuPass) {
+                        if (targetMenuPass.classList.contains("nav_skill")) {
+                            $(htmlEle).animate({ scrollTop: skillTop }, 500);
+                        } else if (targetMenuPass.classList.contains("nav_portfolio")) {
+                            $(htmlEle).animate({ scrollTop: portfolioTop }, 500);
+                        } else {
+                            $(htmlEle).animate({ scrollTop: headTop }, 500);
+                        }
+                    }
+                }
+            }
+        }
+
+        portfolioClickEvent();
+
+        function portfolioClickEvent() {
+            var portfolioSection = document.querySelector(".portfolio");
+            var portfolioMenuTab = portfolioSection.querySelector(".portfolio_menu");
+
+            portfolioMenuTab.addEventListener("click", portfolioMenuChange);
+
+            function portfolioMenuChange(event) {
+                if (event.target.nodeName != "A") {
+                    return;
+                } else {
+                    var allItem = portfolioMenuTab.querySelectorAll("a");
+                    var targetItem = event.target;
+
+                    for (var i = 0; i < allItem.length; i++) {
+                        allItem[i].classList.remove("now")
+                    }
+                    targetItem.classList.add("now");
+
+                    portfolioListChange(targetItem);
+
+                    function portfolioListChange(targetItemPass) {
+                        var portfolioListTab = portfolioSection.querySelector(".portfolio_list");
+
+                        if (targetItemPass.classList.contains("all")) {
+                            portfolioListTab.classList.remove("responsive");
+                            portfolioListTab.classList.remove("pc");
+                            portfolioListTab.classList.remove("mobile");
+                            portfolioListTab.classList.add("all");
+
+                        } else if (targetItemPass.classList.contains("responsive")) {
+                            portfolioListTab.classList.remove("all");
+                            portfolioListTab.classList.remove("pc");
+                            portfolioListTab.classList.remove("mobile");
+                            portfolioListTab.classList.add("responsive");
+                        } else if (targetItemPass.classList.contains("pc")) {
+                            portfolioListTab.classList.remove("all");
+                            portfolioListTab.classList.remove("responsive");
+                            portfolioListTab.classList.remove("mobile");
+                            portfolioListTab.classList.add("pc");
+                        } else {
+                            portfolioListTab.classList.remove("all");
+                            portfolioListTab.classList.remove("responsive");
+                            portfolioListTab.classList.remove("pc");
+                            portfolioListTab.classList.add("mobile");
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

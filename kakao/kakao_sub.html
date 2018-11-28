@@ -1,548 +1,554 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="utf-8">
-	<title>kakao sub</title>
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-	<link rel="stylesheet" media="all" href="css/common.css" />
-	 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <script type="text/javascript" src="script_sub.js"></script>
-  <script type="text/javascript" src="re_classlist.js"></script>
-	<style></style>
-	<script></script>
+    <meta charset="utf-8">
+    <title>kakao sub</title>
+    <link rel="stylesheet" media="all" href="css/reset.css" />
+    <link rel="stylesheet" media="all" href="css/common.css" />
+    <link rel="stylesheet" media="all" href="css/fonts.css" />
+    <link rel="stylesheet" media="all" href="css/layout.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style></style>
+    <script></script>
 </head>
-<script>
-	$(document).ready(function () {
-		var subSlide = $(".right_vi > ul").bxSlider({
-			mode: "fade",
-			prevSelector: ".prev_next .prev",
-			nextSelector: ".prev_next .next",
-			pager: false,
-			auto: true,
-			prevText: "",
-			nextText: ""
-		})
-	})
-</script>
 <body>
-	<div class="wrap">
-		<header class="put sub_header"><!--header-->
-			<div class="clearfix inner">
-				<h1><a href="#">kakao</a></h1>
-				<nav>
-					<h2>header menu</h2>
-					<ul class="clearfix">
-						<li>
-							<a href="#">카카오<span></span></a>
-							<div class="under_menu kakao">
-								<ul class="clearfix">
-									<li>
-										<div>
-											<strong><a href="#">카카오 소개</a></strong>
-											<ul>
-												<li><a href="#">비전</a></li>
-												<li><a href="#">카카오 문화</a></li>
-												<li><a href="#">걸어온 길</a></li>
-												<li><a href="#">CI</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">카카오 AI</a></strong>
-											<ul>
-												<li><a href="#">소개</a></li>
-												<li><a href="#">알고리즘 윤리</a></li>
-											</ul>
-										</div>
-									</li>
-									<li><div><strong><a href="#">자회사</a></strong></div></li>
-									<li>
-										<div>
-											<strong><a href="#">광고 및 제휴</a></strong>
-											<ul>
-												<li><a href="#">광고 안내</a></li>
-												<li><a href="#">제휴 안내</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">홍보채널</a></strong>
-											<ul>
-												<li><a href="#">보도자료</a></li>
-												<li><a href="#">브랜드 영상</a></li>
-												<li><a href="#">미디어 행사</a></li>
-												<li><a href="#">Kakao Travel Day</a></li>
-											</ul>
-										</div>
-									</li>
-									<li><div><strong><a href="#">오시는 길</a></strong></div></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#">투자정보<span></span></a>
-							<div class="under_menu invest">
-								<ul class="clearfix">
-									<li>
-										<div>
-											<strong><a href="#">경영정보</a></strong>
-											<ul>
-												<li><a href="#">주주구성</a></li>
-												<li><a href="#">이사회</a></li>
-												<li><a href="#">정관</a></li>
-												<li><a href="#">기업윤리규정</a></li>
-												<li><a href="#">기업지배구조</a></li>
-											</ul>
-										</div>
-									</li>
-									<li><div><strong><a href="#">공시정보</a></strong></div></li>
-									<li><div><strong><a href="#">주가정보</a></strong></div></li>
-									<li>
-										<div>
-											<strong><a href="#">재무정보</a></strong>
-											<ul>
-												<li><a href="#">연결재무제표</a></li>
-												<li><a href="#">별도재무제표</a></li>
-												<li><a href="#">신용등급</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">IR 일정</a></strong>
-											<ul>
-												<li><a href="#">IR 행사</a></li>
-												<li><a href="#">주주총회</a></li>
-												<li><a href="#">IR 미팅예약</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">IR 자료실</a></strong>
-											<ul>
-												<li><a href="#">실적발표</a></li>
-												<li><a href="#">정기보고서</a></li>
-												<li><a href="#">IR FAQ</a></li>
-											</ul>
-										</div>
-									</li>
-									<li><div><strong><a href="#">증권사커버리지</a></strong></div></li>
-									<li><div><strong><a href="#">공고사항</a></strong></div></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#">서비스<span class="now"></span></a>
-							<div class="under_menu serv">
-								<ul>
-									<li>
-										<div>
-											<strong><a href="#">포털</a></strong>
-											<ul>
-												<li><a href="#">Daum</a></li>
-												<li><a href="#">Daum 뉴스</a></li>
-												<li><a href="#">Daum 검색</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">커뮤니케이션</a></strong>
-											<ul>
-												<li><a href="#">카카오톡</a></li>
-												<li><a href="#">카카오스토리</a></li>
-												<li><a href="#">카카오톡 치즈</a></li>
-												<li><a href="#">Daum 메일</a></li>
-												<li><a href="#">Daum 카페</a></li>
-												<li><a href="#">아지트</a></li>
-												<li><a href="#">티스토리</a></li>
-												<li><a href="#">브런치</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">콘텐츠</a></strong>
-											<ul>
-												<li><a href="#" style="border-bottom: 1px solid #666;">카카오페이지</a></li>
-												<li><a href="#">카카오TV</a></li>
-												<li><a href="#">카카오뮤직</a></li>
-												<li><a href="#">카카오프렌즈</a></li>
-												<li><a href="#">Daum 웹툰</a></li>
-												<li><a href="#">1boon</a></li>
-												<li><a href="#">스토리펀딩</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">커머스</a></strong>
-											<ul>
-												<li><a href="#">카카오 선물하기</a></li>
-												<li><a href="#">카카오장보기</a></li>
-												<li><a href="#">카카오스타일</a></li>
-												<li><a href="#">카카오프렌즈</a></li>
-												<li><a href="#">카카오파머</a></li>
-												<li><a href="#">Daum 쇼핑</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">게임</a></strong>
-											<ul><li><a href="#">카카오게임</a></li></ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">핀테크</a></strong>
-											<ul><li><a href="#">카카오페이</a></li></ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">모빌리티&#38;라이프</a></strong>
-											<ul>
-												<li><a href="#">카카오 T</a></li>
-												<li><a href="#">카카오드라이버</a></li>
-												<li><a href="#">카카오내비</a></li>
-												<li><a href="#">카카오맵</a></li>
-												<li><a href="#">카카오버스</a></li>
-												<li><a href="#">카카오지하철</a></li>
-												<li><a href="#">카카오헤어샵</a></li>
-												<li><a href="#">카카오플레이스</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">소셜임팩트</a></strong>
-											<ul>
-												<li><a href="#">같이가치 with Kakao</a></li>
-												<li><a href="#">메이커스 with Kakao</a></li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#">소셜임팩트<span></span></a>
-							<div class="under_menu social">
-								<ul>
-									<li>
-										<div>
-											<strong><a href="#">소셜임팩트 서비스</a></strong>
-											<ul>
-												<li><a href="#">같이가치 with Kakao</a></li>
-												<li><a href="#">메이커스 with Kakao</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">사회공헌</a></strong>
-											<ul>
-												<li><a href="#">Next</a></li>
-												<li><a href="#">Connect</a></li>
-												<li><a href="#">Kakao Krew</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">상생</a></strong>
-											<ul>
-												<li><a href="#">상생센터</a></li>
-												<li><a href="#">상생서포터즈</a></li>
-												<li><a href="#">Kakao 클래스</a></li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<div>
-											<strong><a href="#">제주지역협력</a></strong>
-											<ul>
-												<li><a href="#">교육 산학</a></li>
-												<li><a href="#">지역 상생</a></li>
-												<li><a href="#">문화 교류</a></li>
-												<li><a href="#">제주창조경제혁신센터</a></li>
-											</ul>
-										</div>
-									</li>
-									<li><div><strong><a href="#">Partners with Kakao</a></strong></div></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="#">고객지원<span></span></a></li>
-						<li><a href="#" class="scout">인재영입<em class="go"></em><span></span></a></li>
-					</ul>
-				</nav>
-				<div class="lang">
-					<a href="#" class="now">KOR</a>
-					<a href="#" class="">ENG</a>
-				</div>
-			</div>
-		</header>
-		<main><!--본문내용-->
-			<div class="sub_contents">
-				<div class="con_tab">
-					<div class="tab_inner">
-						<div class="breadcrumbs">
-							<span><a href=#>홈</a></span>
-							<span><a href=#>서비스</a></span>
-							<span>콘텐츠</span>
-							<span class="showed">카카오페이지</span>
-						</div>
-						<div class="help clearfix">
-							<a href="#" class="showed">서비스 특징</a>
-							<span class="txt_bar"></span>
-							<a href="#">서비스 웹 바로가기<span class="direct_icon"></span></a>
-							<span class="txt_bar"></span>
-							<div class="download">
-								<a href="#">다운로드<span class="down_icon"></span></a>
-								<ul class="app_down clearfix">
-									<li><a href="#"><span class="google_icon"></span>Google Play</a></li>
-									<li><span class="ico_bar"></span></li>
-									<li><a href="#"><span class="apple_icon"></span>App Store</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="con_visual">
-						<div class="vi_inner">
-							<img src="images/icon_kakaopage.png" alt="카카오페이지"/>
-							<p> 이야기를 보는 완전 새로운 방식, <br/> 카카오페이지 </p>
-						</div>
-				</div>
-				<div class="con_desc">
-					<div class="desc_inner clearfix">
-						<p class="desc_left">이야기의 차원이 달라지다.<br/>카카오페이지</p>
-						<div class="desc_right">
-							<div class="right_vi">
-								<ul>
-									<li class="vi_01 active"><span>1/2</span></li>
-									<li class="vi_02"><span>2/2</span></li>
-								</ul>
-								<div class="prev_next">
-									<div class="prev"></div>
-									<div class="next"></div>
-								</div>
-							</div>
-							<div class="col2 clearfix">
-								<div class="row1">
-									<div class="col">
-										<strong>카카오 대표 모바일 콘텐츠 플랫폼</strong>
-										<span>카카오페이지는 1500만명이 선택한 카카오의 웹툰, 소설, 베스트셀러, 영화 대표 플랫폼입니다. 매일 당신에게 잊지 못할 이야기를 선물합니다.</span>
-									</div>
-									<div class="col">
-										<strong>100만이 사랑한 작품 ‘밀리언페이지’</strong>
-										<span>카카오페이지에는 100만이 넘는 독자들이 사랑한 작품이 60개가 넘죠. 그 중엔 하루에 100만명이 볼 정도의 재미있는 작품도 있어요.</span>
-										<a href="#">자세히 보기<i></i></a>
-									</div>
-								</div>
-								<div class="row2">
-									<div class="col">
-										<strong>영상은 일단 10분 플레이</strong>
-										<span>최신 인기영화를 일단 10분 무료로 보고 시작하세요. 카카오페이지에서는 영상 초반의 10분 이상을 무료로 볼 수 있어요.</span>
-									</div>
-									<div class="col">
-										<strong>유저들이 사랑하는 ‘기다리면 무료’</strong>
-										<span>오직 카카오페이지만의 작품을 보는 특별한 방법! 2,300개가 넘는 작품들을 ‘기다리면 무료’로 즐기세요.</span>
-									</div>
-								</div>
-								<div class="row3">
-									<div class="col">
-										<strong>캐시 주는 친구 캐시프렌즈</strong>
-										<span>작품을 더 보고싶을 때 캐시프렌즈에 들어오면 내가 받을 수 있는 ‘오늘의 캐시’를 확인할 수 있어요. 받은 캐시로 더 즐겁게 작품을 볼 수 있어요.</span>
-									</div>
-									<div class="col">
-										<strong>취향대로 즐기는 	&#35;태그</strong>
-										<span>어떤 작품을 먼저 봐야할 지 고민하지 마세요. 취향에 딱 맞는 작품들만 골라서 보여드릴게요.</span>
-										<a href="#">자세히 보기<i></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main><!--본문내용-->
-		<footer><!--footer-->
-			<div class="footer_sub">
-					<ul class="clearfix">
-						<li>
-							<strong><a href="#">카카오</a></strong>
-							<div>
-								<ul>
-									<li><a href="#">카카오 소개</a></li>
-									<li><a href="#">카카오 AI</a></li>
-									<li><a href="#">자회사</a></li>
-									<li><a href="#">광고 및 제휴</a></li>
-									<li><a href="#">홍보채널</a></li>
-									<li><a href="#">오시는 길</a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<strong><a href="#">투자정보</a></strong>
-							<div>
-								<ul>
-									<li><a href="#">경영정보</a></li>
-									<li><a href="#">공시정보</a></li>
-									<li><a href="#">주가정보</a></li>
-									<li><a href="#">재무정보</a></li>
-									<li><a href="#">IR 일정</a></li>
-									<li><a href="#">IR 자료실</a></li>
-									<li><a href="#">증권사커버리지</a></li>
-									<li><a href="#">공고사항</a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<strong><a href="#">서비스</a></strong>
-							<div>
-								<ul>
-									<li><a href="#">포털</a></li>
-									<li><a href="#">커뮤니케이션</a></li>
-									<li><a href="#">콘텐츠</a></li>
-									<li><a href="#">커머스</a></li>
-									<li><a href="#">게임</a></li>
-									<li><a href="#">핀테크</a></li>
-									<li><a href="#">모빌리티 &#38; 라이프</a></li>
-									<li><a href="#">소셜임팩트</a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<strong><a href="#">소셜임팩트</a></strong>
-							<div>
-								<ul>
-									<li><a href="#">소셜임팩트 서비스</a></li>
-									<li><a href="#">사회공헌</a></li>
-									<li><a href="#">상생</a></li>
-									<li><a href="#">제주지역협력</a></li>
-									<li><a href="#">Partners with Kakao</a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<strong><a href="#">인재영입</a></strong>
-							<div>
-								<ul>
-									<li><a href="#">카카오크루</a></li>
-									<li><a href="#">크루인터뷰</a></li>
-									<li><a href="#">지원하기</a></li>
-									<li><a href="#">나의지원서</a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<strong><a href="#">고객지원</a></strong>
-							<div>
-								<ul>
-									<li><a href="#">카카오 고객센터</a></li>
-									<li><a href="#">Daum 고객센터</a></li>
-								</ul>
-							</div>
-							<strong class="customer"><a href="#">카카오계정</a></strong>
-							<div>
-								<ul>
-									<li><a href="#">계정정보 관리</a></li>
-									<li><a href="#">계정/비밀번호 찾기</a></li>
-									<li><a href="#">계정 도움말</a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			<div class="footer_desc sub_footer_desc">
-				<div class="inner">
-					<ul class="clearfix">
-						<li>
-							<a href="#" class="">이용약관<span class=""></span></a>
-							<div class="used">
-								<ul>
-									<li><a href="#">카카오 통합 약관<span></span></a></li>
-									<li><a href="#">카카오 서비스 약관<span></span></a></li>
-									<li><a href="#">Daum 서비스 약관<span></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="">위치기반서비스이용약관<span class=""></span></a>
-							<div class="locate">
-								<ul>
-									<li><a href="#">카카오 위치기반서비스 이용약관<span></span></a></li>
-									<li><a href="#">Daum 위치기반서비스 약관<span></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="">개인정보처리방침<span class=""></span></a>
-							<div class="private">
-								<ul>
-									<li><a href="#">기업사이트 개인정보처리방침<span></span></a></li>
-									<li><a href="#">카카오 서비스 개인정보처리방침<span></span></a></li>
-									<li><a href="#">Daum 서비스 개인정보처리방침<span></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="">운영정책<span class=""></span></a>
-							<div class="manage">
-								<ul>
-									<li><a href="#">카카오 운영정책<span></span></a></li>
-									<li><a href="#">Daum 운영정책<span></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="">청소년보호정책<span class=""></span></a>
-							<div class="protect">
-								<ul>
-									<li><a href="#">카카오 청소년보호정책<span></span></a></li>
-									<li><a href="#">Daum 청소년보호정책<span></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="#" class="">권리침해신고안내</a></li>
-						<li>
-							<a href="#" class="">공지사항<span class=""></span></a>
-							<div class="notice">
-								<ul>
-									<li><a href="#">기업사이트 공지사항<span></span></a></li>
-									<li><a href="#">카카오 서비스 공지사항<span></span></a></li>
-									<li><a href="#">Daum 서비스 공지사항<span></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="#" class="">사이버윤리실</a></li>
-					</ul>
-					<div class="util">
-						<a href="#">관련사이트<span></span></a>
-						<ul class="">
-							<li><a href="#">카카오 AI</a></li>
-							<li><a href="#">카카오 프라이버시</a></li>
-							<li><a href="#">카카오 공식 블로그</a></li>
-							<li><a href="#">카카오 디벨로퍼스</a></li>
-							<li><a href="#">다음 포털 사이트</a></li>
-							<li><a href="#">동반성장 사이트</a></li>
-							<li><a href="#">제주 with kakao</a></li>
-						</ul>
-					</div>
-					<p>Copyright &#169; <a href="#">Kakao Corp.</a> All rights reserved.</p>
-				</div>
-			</div>
-		</footer>
-		<a href="#" class="home sub_page">home</a>
-	</div>
+    <div id="wrap" class="sub_wrap"><!--wrap 시작-->
+        <header id="header"><!--header 시작-->
+            <div class="clearfix header_inner sub_header">
+                <h1><a href="#n">kakao</a></h1>
+                <nav>
+                    <h2>header menu</h2>
+                    <ul>
+                        <li>
+                            <a href="#n" class="nav_item">카카오<span></span></a>
+                            <div class="under_menu kakao">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">카카오 소개</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">비전</a></li>
+                                                <li><a href="#n">카카오 문화</a></li>
+                                                <li><a href="#n">걸어온 길</a></li>
+                                                <li><a href="#n">CI</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">카카오 AI</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">소개</a></li>
+                                                <li><a href="#n">알고리즘 윤리</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div><strong class="under_item"><a href="#n">자회사</a></strong></div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">광고 및 제휴</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">광고 안내</a></li>
+                                                <li><a href="#n">제휴 안내</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">홍보채널</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">보도자료</a></li>
+                                                <li><a href="#n">브랜드 영상</a></li>
+                                                <li><a href="#n">미디어 행사</a></li>
+                                                <li><a href="#n">Kakao Travel Day</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div><strong class="under_item"><a href="#n">오시는 길</a></strong></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="nav_item">투자정보<span></span></a>
+                            <div class="under_menu invest">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">경영정보</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">주주구성</a></li>
+                                                <li><a href="#n">이사회</a></li>
+                                                <li><a href="#n">정관</a></li>
+                                                <li><a href="#n">기업윤리규정</a></li>
+                                                <li><a href="#n">기업지배구조</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div><strong class="under_item"><a href="#n">공시정보</a></strong></div>
+                                    </li>
+                                    <li>
+                                        <div><strong class="under_item"><a href="#n">주가정보</a></strong></div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">재무정보</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">연결재무제표</a></li>
+                                                <li><a href="#n">별도재무제표</a></li>
+                                                <li><a href="#n">신용등급</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">IR 일정</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">IR 행사</a></li>
+                                                <li><a href="#n">주주총회</a></li>
+                                                <li><a href="#n">IR 미팅예약</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">IR 자료실</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">실적발표</a></li>
+                                                <li><a href="#n">정기보고서</a></li>
+                                                <li><a href="#n">IR FAQ</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div><strong class="under_item"><a href="#n">증권사커버리지</a></strong></div>
+                                    </li>
+                                    <li>
+                                        <div><strong class="under_item"><a href="#n">공고사항</a></strong></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="nav_item">서비스<span></span></a>
+                            <div class="under_menu serv">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">포털</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">Daum</a></li>
+                                                <li><a href="#n">Daum 뉴스</a></li>
+                                                <li><a href="#n">Daum 검색</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">커뮤니케이션</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">카카오톡</a></li>
+                                                <li><a href="#n">카카오스토리</a></li>
+                                                <li><a href="#n">카카오톡 치즈</a></li>
+                                                <li><a href="#n">Daum 메일</a></li>
+                                                <li><a href="#n">Daum 카페</a></li>
+                                                <li><a href="#n">아지트</a></li>
+                                                <li><a href="#n">티스토리</a></li>
+                                                <li><a href="#n">브런치</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">콘텐츠</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="kakao_sub.html">카카오페이지</a></li>
+                                                <li><a href="#n">카카오TV</a></li>
+                                                <li><a href="#n">카카오뮤직</a></li>
+                                                <li><a href="#n">카카오프렌즈</a></li>
+                                                <li><a href="#n">Daum 웹툰</a></li>
+                                                <li><a href="#n">1boon</a></li>
+                                                <li><a href="#n">스토리펀딩</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">커머스</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">카카오 선물하기</a></li>
+                                                <li><a href="#n">카카오장보기</a></li>
+                                                <li><a href="#n">카카오스타일</a></li>
+                                                <li><a href="#n">카카오프렌즈</a></li>
+                                                <li><a href="#n">카카오파머</a></li>
+                                                <li><a href="#n">Daum 쇼핑</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">게임</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">카카오게임</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">핀테크</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">카카오페이</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">모빌리티&#38;라이프</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">카카오 T</a></li>
+                                                <li><a href="#n">카카오드라이버</a></li>
+                                                <li><a href="#n">카카오내비</a></li>
+                                                <li><a href="#n">카카오맵</a></li>
+                                                <li><a href="#n">카카오버스</a></li>
+                                                <li><a href="#n">카카오지하철</a></li>
+                                                <li><a href="#n">카카오헤어샵</a></li>
+                                                <li><a href="#n">카카오플레이스</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">소셜임팩트</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">같이가치 with Kakao</a></li>
+                                                <li><a href="#n">메이커스 with Kakao</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="nav_item">소셜임팩트<span></span></a>
+                            <div class="under_menu social">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">소셜임팩트 서비스</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">같이가치 with Kakao</a></li>
+                                                <li><a href="#n">메이커스 with Kakao</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">사회공헌</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">Next</a></li>
+                                                <li><a href="#n">Connect</a></li>
+                                                <li><a href="#n">Kakao Krew</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">상생</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">상생센터</a></li>
+                                                <li><a href="#n">상생서포터즈</a></li>
+                                                <li><a href="#n">Kakao 클래스</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <strong class="under_item"><a href="#n">제주지역협력</a></strong>
+                                            <ul class="under_list">
+                                                <li><a href="#n">교육 산학</a></li>
+                                                <li><a href="#n">지역 상생</a></li>
+                                                <li><a href="#n">문화 교류</a></li>
+                                                <li><a href="#n">제주창조경제혁신센터</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div><strong class="under_item"><a href="#n">Partners with Kakao</a></strong></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#n" class="nav_item">고객지원<span></span></a></li>
+                        <li><a href="#n" class="scout nav_item">인재영입<em class="go"></em><span></span></a></li>
+                    </ul>
+                </nav>
+                <div class="lang">
+                    <a href="#n" class="now">KOR</a>
+                    <a href="#n" class="">ENG</a>
+                </div>
+            </div>
+        </header><!--header 끝-->
+        <main id="container"><!--본문내용, main 시작-->
+            <div class="sub_contents">
+                <div class="con_tab">
+                    <div class="tab_inner">
+                        <div class="breadcrumbs">
+                            <span><a href="#n">홈</a></span>
+                            <span><a href="#n">서비스</a></span>
+                            <span>콘텐츠</span>
+                            <span class="showed">카카오페이지</span>
+                        </div>
+                        <div class="help clearfix">
+                            <a href="#n" class="showed">서비스 특징</a>
+                            <span class="txt_bar"></span>
+                            <a href="#n">서비스 웹 바로가기<span class="direct_icon"></span></a>
+                            <span class="txt_bar"></span>
+                            <div class="download">
+                                <a href="#n">다운로드<span class="down_icon"></span></a>
+                                <ul class="app_down clearfix">
+                                    <li><a href="#n"><span class="google_icon"></span>Google Play</a></li>
+                                    <li><span class="ico_bar"></span></li>
+                                    <li><a href="#n"><span class="apple_icon"></span>App Store</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="con_visual">
+                    <div class="vi_inner">
+                        <img src="images/icon_kakaopage.png" alt="카카오페이지" />
+                        <p> 이야기를 보는 완전 새로운 방식, <br/> 카카오페이지 </p>
+                    </div>
+                </div>
+                <div class="con_desc">
+                    <div class="desc_inner clearfix">
+                        <p class="desc_left">이야기의 차원이 달라지다.<br/>카카오페이지</p>
+                        <div class="desc_right">
+                            <div class="right_vi">
+                                <ul>
+                                    <li class="vi_01 active"><span>1/2</span></li>
+                                    <li class="vi_02"><span>2/2</span></li>
+                                </ul>
+                                <div class="prev_next">
+                                    <div class="prev"></div>
+                                    <div class="next"></div>
+                                </div>
+                            </div>
+                            <div class="col2 clearfix">
+                                <div class="row1">
+                                    <div class="col">
+                                        <strong>카카오 대표 모바일 콘텐츠 플랫폼</strong>
+                                        <span>카카오페이지는 1500만명이 선택한 카카오의 웹툰, 소설, 베스트셀러, 영화 대표 플랫폼입니다. 매일 당신에게 잊지 못할 이야기를 선물합니다.</span>
+                                    </div>
+                                    <div class="col">
+                                        <strong>100만이 사랑한 작품 ‘밀리언페이지’</strong>
+                                        <span>카카오페이지에는 100만이 넘는 독자들이 사랑한 작품이 60개가 넘죠. 그 중엔 하루에 100만명이 볼 정도의 재미있는 작품도 있어요.</span>
+                                        <a href="#n">자세히 보기<i></i></a>
+                                    </div>
+                                </div>
+                                <div class="row2">
+                                    <div class="col">
+                                        <strong>영상은 일단 10분 플레이</strong>
+                                        <span>최신 인기영화를 일단 10분 무료로 보고 시작하세요. 카카오페이지에서는 영상 초반의 10분 이상을 무료로 볼 수 있어요.</span>
+                                    </div>
+                                    <div class="col">
+                                        <strong>유저들이 사랑하는 ‘기다리면 무료’</strong>
+                                        <span>오직 카카오페이지만의 작품을 보는 특별한 방법! 2,300개가 넘는 작품들을 ‘기다리면 무료’로 즐기세요.</span>
+                                    </div>
+                                </div>
+                                <div class="row3">
+                                    <div class="col">
+                                        <strong>캐시 주는 친구 캐시프렌즈</strong>
+                                        <span>작품을 더 보고싶을 때 캐시프렌즈에 들어오면 내가 받을 수 있는 ‘오늘의 캐시’를 확인할 수 있어요. 받은 캐시로 더 즐겁게 작품을 볼 수 있어요.</span>
+                                    </div>
+                                    <div class="col">
+                                        <strong>취향대로 즐기는 	&#35;태그</strong>
+                                        <span>어떤 작품을 먼저 봐야할 지 고민하지 마세요. 취향에 딱 맞는 작품들만 골라서 보여드릴게요.</span>
+                                        <a href="#">자세히 보기<i></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main><!--본문내용, main 끝-->
+        <footer id="footer"><!--footer 시작-->
+            <div class="footer_sub">
+                <ul class="clearfix">
+                    <li>
+                        <strong class="footer_sub_item"><a href="#n">카카오</a></strong>
+                        <div>
+                            <ul class="footer_sub_list">
+                                <li><a href="#n">카카오 소개</a></li>
+                                <li><a href="#n">카카오 AI</a></li>
+                                <li><a href="#n">자회사</a></li>
+                                <li><a href="#n">광고 및 제휴</a></li>
+                                <li><a href="#n">홍보채널</a></li>
+                                <li><a href="#n">오시는 길</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="footer_sub_item"><a href="#n">투자정보</a></strong>
+                        <div>
+                            <ul class="footer_sub_list">
+                                <li><a href="#n">경영정보</a></li>
+                                <li><a href="#n">공시정보</a></li>
+                                <li><a href="#n">주가정보</a></li>
+                                <li><a href="#n">재무정보</a></li>
+                                <li><a href="#n">IR 일정</a></li>
+                                <li><a href="#n">IR 자료실</a></li>
+                                <li><a href="#n">증권사커버리지</a></li>
+                                <li><a href="#n">공고사항</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="footer_sub_item"><a href="#n">서비스</a></strong>
+                        <div>
+                            <ul class="footer_sub_list">
+                                <li><a href="#n">포털</a></li>
+                                <li><a href="#n">커뮤니케이션</a></li>
+                                <li><a href="#n">콘텐츠</a></li>
+                                <li><a href="#n">커머스</a></li>
+                                <li><a href="#n">게임</a></li>
+                                <li><a href="#n">핀테크</a></li>
+                                <li><a href="#n">모빌리티 &#38; 라이프</a></li>
+                                <li><a href="#n">소셜임팩트</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="footer_sub_item"><a href="#n">소셜임팩트</a></strong>
+                        <div>
+                            <ul class="footer_sub_list">
+                                <li><a href="#n">소셜임팩트 서비스</a></li>
+                                <li><a href="#n">사회공헌</a></li>
+                                <li><a href="#n">상생</a></li>
+                                <li><a href="#n">제주지역협력</a></li>
+                                <li><a href="#n">Partners with Kakao</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="footer_sub_item"><a href="#n">인재영입</a></strong>
+                        <div>
+                            <ul class="footer_sub_list">
+                                <li><a href="#n">카카오크루</a></li>
+                                <li><a href="#n">크루인터뷰</a></li>
+                                <li><a href="#n">지원하기</a></li>
+                                <li><a href="#n">나의지원서</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="footer_sub_item"><a href="#n">고객지원</a></strong>
+                        <div>
+                            <ul class="footer_sub_list">
+                                <li><a href="#n">카카오 고객센터</a></li>
+                                <li><a href="#n">Daum 고객센터</a></li>
+                            </ul>
+                        </div>
+                        <strong class="customer footer_sub_item"><a href="#n">카카오계정</a></strong>
+                        <div>
+                            <ul class="footer_sub_list">
+                                <li><a href="#n">계정정보 관리</a></li>
+                                <li><a href="#n">계정/비밀번호 찾기</a></li>
+                                <li><a href="#n">계정 도움말</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_desc sub_footer_desc">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#n" class="footer_item">이용약관<span class=""></span></a>
+                        <div class="used">
+                            <ul class="footer_list">
+                                <li><a href="#n">카카오 통합 약관<span></span></a></li>
+                                <li><a href="#n">카카오 서비스 약관<span></span></a></li>
+                                <li><a href="#n">Daum 서비스 약관<span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#n" class="footer_item">위치기반서비스이용약관<span class=""></span></a>
+                        <div class="locate">
+                            <ul class="footer_list">
+                                <li><a href="#n">카카오 위치기반서비스 이용약관<span></span></a></li>
+                                <li><a href="#n">Daum 위치기반서비스 약관<span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#n" class="footer_item">개인정보처리방침<span class=""></span></a>
+                        <div class="private">
+                            <ul class="footer_list">
+                                <li><a href="#n">기업사이트 개인정보처리방침<span></span></a></li>
+                                <li><a href="#n">카카오 서비스 개인정보처리방침<span></span></a></li>
+                                <li><a href="#n">Daum 서비스 개인정보처리방침<span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#n" class="footer_item">운영정책<span class=""></span></a>
+                        <div class="manage">
+                            <ul class="footer_list">
+                                <li><a href="#n">카카오 운영정책<span></span></a></li>
+                                <li><a href="#n">Daum 운영정책<span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#n" class="footer_item">청소년보호정책<span class=""></span></a>
+                        <div class="protect">
+                            <ul class="footer_list">
+                                <li><a href="#n">카카오 청소년보호정책<span></span></a></li>
+                                <li><a href="#n">Daum 청소년보호정책<span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#n" class="footer_item">권리침해신고안내</a></li>
+                    <li>
+                        <a href="#n" class="footer_item">공지사항<span class=""></span></a>
+                        <div class="notice">
+                            <ul class="footer_list">
+                                <li><a href="#n">기업사이트 공지사항</a></li>
+                                <li><a href="#n">카카오 서비스 공지사항<span></span></a></li>
+                                <li><a href="#n">Daum 서비스 공지사항<span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#n" class="footer_item">사이버윤리실</a></li>
+                </ul>
+               <div class="util">
+                    <a href="#n" class="">관련사이트<span></span></a>
+                    <ul class="util_list">
+                        <li><a href="#n">카카오 AI</a></li>
+                        <li><a href="#n">카카오 프라이버시</a></li>
+                        <li><a href="#n">카카오 공식 블로그</a></li>
+                        <li><a href="#n">카카오 디벨로퍼스</a></li>
+                        <li><a href="#n">다음 포털 사이트</a></li>
+                        <li><a href="#n">동반성장 사이트</a></li>
+                        <li><a href="#n">제주 with kakao</a></li>
+                    </ul>
+                </div>
+                <p>Copyright &#169; <a href="#n">Kakao Corp.</a> All rights reserved.</p>
+            </div>
+        </footer><!--footer 끝-->
+        <a href="#" class="home sub_page">home</a>
+    </div><!--wrap 끝-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/re_classlist.js"></script>
 </body>
+
 </html>
